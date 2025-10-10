@@ -149,6 +149,6 @@ st.subheader("💖 Mensagem de Motivação")
 st.markdown("### 🎬 É se amando que tudo se transforma ✨")
 
 # Exibe o vídeo diretamente do GitHub (garanta que o nome do arquivo está sem acento!)
-st.video("https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/main/video_amor_proprio.mp4")
+st.video("https://raw.githubusercontent.com/rosalva1911-eng/Programa-saude-fe/main/video%20amor%20proprio.mp4")
 
 st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
