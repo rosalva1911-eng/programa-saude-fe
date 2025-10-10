@@ -1,154 +1,116 @@
-import streamlit as st
+# ==============================
+# 🌸 Programa Saúde da Fe 🌸 
+# ==============================
 
-# ===================== CONFIG =====================
-st.set_page_config(page_title="Programa Saúde da Fê 💧", page_icon="🌿", layout="centered")
-st.title("🌸 Programa Saúde da Fê")
+import streamlit as st
+from pathlib import Path
+import random
+
+# ---------- LIMPAR CACHE ----------
+st.cache_data.clear()
+
+# ---------- CONFIGURAÇÃO ----------
+st.set_page_config(page_title="Programa Saúde da FE", page_icon="💖", layout="centered")
+
+# ---------- ESTILO ----------
+st.markdown("""
+<style>
+.small-muted { color:#777; font-size:0.9rem; }
+.card { padding:1rem; border-radius:12px; background:#fafafa; border:1px solid #eee; }
+.stVideo {border-radius: 16px; box-shadow: 0px 0px 12px rgba(0,0,0,0.1);}
+</style>
+""", unsafe_allow_html=True)
+
+# ---------- TÍTULO ----------
+st.title("🌸 Programa Saúde da FE")
+st.markdown("_Cuidar do corpo é um ato de amor-próprio._ 💕")
 st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
+st.write("Preencha seus dados e veja suas recomendações personalizadas. 🌿")
 
-st.write("Preencha seus dados e veja suas recomendações personalizadas. 💪🍃")
-import streamlit as st
-
-
-# ===================== FUNÇÕES =====================
+# ---------- FUNÇÕES ----------
 def calcular_imc(peso: float, altura: float) -> float:
-    if altura <= 0:
-        return 0.0
-    return peso / (altura ** 2)
-# ===================== FUNÇÕES =====================
-def calcular_imc(peso: float, altura: float) -> float:
-    if altura <= 0:
-        return 0.0
+    if altura <= 0: return 0
     return peso / (altura ** 2)
 
 def classificar_imc(imc: float) -> str:
-    if imc == 0:
-        return "Altura inválida"
-    if imc < 18.5:
-        return "Abaixo do peso"
-    if imc < 25:
-        return "Peso adequado"
-    if imc < 30:
-        return "Sobrepeso"
-    return "Obesidade"
+    if imc < 18.5: return "Abaixo do peso"
+    elif imc < 25: return "Peso adequado"
+    elif imc < 30: return "Sobrepeso"
+    elif imc < 35: return "Obesidade grau I"
+    elif imc < 40: return "Obesidade grau II"
+    else: return "Obesidade grau III"
 
-def calcular_agua_diaria_ml(peso: float) -> int:
-    # regra prática: ~35 ml por kg de peso
-    return int(round(peso * 35))
+def calcular_agua_diaria(peso: float) -> int:
+    return int(peso * 35)
 
-def calcular_exercicio_por_dia_min(imc: float) -> str:
-    # recomendações gerais (OMS) adaptadas por faixa de IMC
-    if imc == 0:
-        return "—"
-    if imc < 18.5:
-        return "20–30 min/dia (leve) + força 2×/sem"
+def calcular_exercicio(imc: float) -> str:
     if imc < 25:
-        return "30–45 min/dia (moderado) + força 2–3×/sem"
-    if imc < 30:
-        return "45–60 min/dia (moderado) + força 3×/sem"
-    return "60–90 min/dia (progressivo) + força 3×/sem"
+        return "30 minutos/dia (5x por semana)"
+    elif imc < 30:
+        return "45 minutos/dia (5–6x por semana)"
+    else:
+        return "60 minutos/dia (6x por semana)"
 
 def calcular_peso_ideal(altura: float, sexo: str) -> float:
-    """
-    Fórmula de Devine:
-    - Masc: 50 + 2.3 * (altura em polegadas - 60)
-    - Fem : 45.5 + 2.3 * (altura em polegadas - 60)
-    """
-    if altura <= 0:
-        return 0.0
-    polegadas = (altura * 100) / 2.54
-    if sexo.upper().startswith("M"):  # Masculino
+    altura_cm = altura * 100
+    polegadas = altura_cm / 2.54
+    if sexo.upper() == "M":
         return 50 + 2.3 * (polegadas - 60)
-    else:  # Feminino (padrão)
-        return 45.5 + 2.3 * (polegadas - 60)
+    return 45.5 + 2.3 * (polegadas - 60)
 
-import random
-
-def frase_motivacional(nome: str, imc_class: str) -> str:
-    base = f"{nome}, "
-    
-    frases_gerais = [
-        "você é sua melhor versão em construção. 🌸",
-        "o equilíbrio vem com o amor-próprio e a constância. 🌿",
-        "pequenos cuidados diários constroem grandes mudanças. 💧",
-        "seu corpo agradece cada escolha de bem-estar. ✨",
-        "um passo de cada vez — mas nunca pare. 💪",
-        "o autocuidado é a forma mais bonita de amor. 💖",
-        "você merece se sentir leve, forte e feliz. ☀️",
-        "cultive gentileza com você mesma todos os dias. 🌷",
-        "respira, confia e continua — você está evoluindo. 🌙",
-        "ser saudável é um ato de amor com quem você é. 🍃"
+def frase_motivacional(nome: str, classe: str) -> str:
+    frases = [
+        "É se amando que tudo se transforma. 💫",
+        "Seu corpo é sua casa: trate-o com carinho. 🌿",
+        "Pequenos passos diários geram grandes mudanças. ✨",
+        "Você merece cuidado, presença e gentileza. 💖",
+        "Beber água é um abraço por dentro. 💧"
     ]
+    base = random.choice(frases)
+    return f"{nome}, {base}" if nome else base
 
-    frases_por_imc = {
-        "Abaixo do peso": [
-            "seu corpo é único. Fortaleça-se com carinho e paciência. 🌱",
-            "cada refeição equilibrada é um gesto de amor por você. 💕",
-        ],
-        "Peso adequado": [
-            "você está vibrando em equilíbrio. Continue se cuidando! 🌸",
-            "mantenha o ritmo: corpo e mente em harmonia. 🌿",
-        ],
-        "Sobrepeso": [
-            "tudo começa com um passo — e você já começou. 💪",
-            "cada treino é um presente para o seu futuro. 🌞",
-        ],
-        "Obesidade": [
-            "gentileza com o processo, consistência com o propósito. 🌷",
-            "com amor e paciência, o impossível vira rotina. ✨",
-        ]
-    }
-
-    # Seleciona frases conforme classificação do IMC
-    frases_escolhidas = frases_por_imc.get(imc_class, frases_gerais)
-    frase = random.choice(frases_escolhidas)
-    return base + frase
-
-    
-
-
-# ===================== ENTRADAS =====================
+# ---------- FORMULÁRIO ----------
 with st.form("form_saude"):
     col1, col2 = st.columns(2)
     with col1:
         nome = st.text_input("Nome")
-        idade = st.number_input("Idade (anos)", min_value=0, max_value=120, step=1, value=25)
-        sexo = st.selectbox("Sexo", ["Feminino", "Masculino"])
+        idade = st.number_input("Idade", 0, 120, 30)
+        sexo = st.selectbox("Sexo", ["F", "M"])
     with col2:
-        altura = st.number_input("Altura (m)", min_value=1.0, max_value=2.5, step=0.01, value=1.65)
-        peso = st.number_input("Peso (kg)", min_value=1.0, max_value=400.0, step=0.1, value=60.0)
+        altura = st.number_input("Altura (m)", 0.0, 2.30, 1.65, step=0.01)
+        peso = st.number_input("Peso (kg)", 0.0, 300.0, 65.0, step=0.1)
 
     enviar = st.form_submit_button("Calcular ✅")
 
-# ===================== RESULTADOS =====================
+# ---------- RESULTADOS ----------
 if enviar:
     imc = calcular_imc(peso, altura)
     classe = classificar_imc(imc)
-    agua_ml = calcular_agua_diaria_ml(peso)
-    exercicio = calcular_exercicio_por_dia_min(imc)
-    peso_id = calcular_peso_ideal(altura, sexo)
+    agua = calcular_agua_diaria(peso)
+    exercicio = calcular_exercicio(imc)
+    ideal = calcular_peso_ideal(altura, sexo)
+    frase = frase_motivacional(nome.strip() if nome else None, classe)
 
     st.markdown("---")
     st.markdown("### 📊 Resultados")
+    c1, c2, c3 = st.columns(3)
+    c1.metric("IMC", f"{imc:.2f}", classe)
+    c2.metric("Água/dia", f"{agua} ml")
+    c3.metric("Peso ideal", f"{ideal:.1f} kg")
 
-    m1, m2, m3 = st.columns(3)
-    m1.metric("IMC", f"{imc:.2f}", classe)
-    m2.metric("Água por dia", f"{agua_ml} ml")
-    m3.metric("Peso ideal", f"{peso_id:.1f} kg")
-
-    st.markdown("### 🏃‍♀️ Recomendação de exercício")
+    st.markdown("### 🏃 Recomendação de exercício")
     st.write(exercicio)
 
-    st.markdown("### 💬 Mensagem motivacional")
-    nome_display = nome.strip() if nome.strip() else "Você"
-    st.success(frase_motivacional(nome_display, classe))
-# --- Mensagem final motivacional ---
+    st.markdown("### 💖 Mensagem motivacional")
+    st.success(frase)
+
+    # ---------- VÍDEO MOTIVACIONAL ----------
+    st.markdown("---")
+    st.markdown("### 🎬 É se amando que tudo se transforma ✨")
+    st.video("https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/main/video_amor_proprio.mp4")
+    st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
+
+# ---------- RODAPÉ ----------
 st.markdown("---")
-st.subheader("💖 Mensagem de Motivação")
-# ===================== VÍDEO MOTIVACIONAL =====================
+st.markdown('<p class="small-muted">Programa Saúde da FE • Feito com carinho em Streamlit 🌸</p>', unsafe_allow_html=True)
 
-st.markdown("### 🎬 É se amando que tudo se transforma ✨")
-
-# Exibe o vídeo diretamente do GitHub (garanta que o nome do arquivo está sem acento!)
-st.video("https://raw.githubusercontent.com/rosalva1911-eng/Programa-saude-fe/main/video%20amor%20proprio.mp4")
-
-st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
