@@ -105,24 +105,13 @@ if enviar:
     st.success(frase)
 
 # ===================== VÍDEO MOTIVACIONAL =====================
-from pathlib import Path
-
 st.markdown("### 🎬 É se amando que tudo se transforma ✨")
 
-# Ajuste estes dois nomes de acordo com o seu repositório:
-BRANCH = "principal"  # use "main" se for o seu caso
-VIDEO_FILENAME = "video_amor_proprio.mp4"  # troque se o seu arquivo for "video_amor_proprio1.mp4"
-
-# 1) Tenta tocar a partir do arquivo local no repositório (mais confiável)
-video_path = Path(VIDEO_FILENAME)
-if video_path.exists():
-    st.video(str(video_path))
-else:
-    # 2) Se não estiver local, usa o RAW do GitHub
-    RAW_LINK = f"https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/{BRANCH}/{VIDEO_FILENAME}"
-    st.video(RAW_LINK)
+# Substitua o link abaixo pelo link DIRETO do seu vídeo (ex: do Canva, HeyGen ou Google Drive público)
+st.video("https://app.heygen.com/videos/eb44f76d34604cd7b672b7b4d32e602c")
 
 st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
+
 
 # ---------- RODAPÉ ----------
 st.markdown("---")
