@@ -8,16 +8,6 @@ st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
 st.write("Preencha seus dados e veja suas recomendações personalizadas. 💪🍃")
 import streamlit as st
 
-# ===================== CONFIG =====================
-st.set_page_config(page_title="Programa Saúde da Fê 💧", page_icon="💖")
-st.title("🌸 Programa Saúde da Fê")
-st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
-st.write("Preencha seus dados e veja suas recomendações personalizadas!")
-
-# --- vídeo motivacional direto do HeyGen ---
-st.markdown("## 🌸 Mensagem em Vídeo")
-st.video("https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/principal/video_amor_proprio.mp4")
-st.caption("É se amando que tudo se transforma. 💫")
 
 # ===================== FUNÇÕES =====================
 def calcular_imc(peso: float, altura: float) -> float:
