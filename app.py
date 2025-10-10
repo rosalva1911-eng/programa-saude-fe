@@ -102,17 +102,8 @@ if enviar:
     st.write(exercicio)
 
     st.markdown("### 💖 Mensagem motivacional")
-    st.success(frase)
-
-# ===================== VÍDEO MOTIVACIONAL =====================
-st.markdown("### 🎬 É se amando que tudo se transforma ✨")
-
-# Substitua o link abaixo pelo link DIRETO do seu vídeo (ex: do Canva, HeyGen ou Google Drive público)
-st.video("https://app.heygen.com/videos/eb44f76d34604cd7b672b7b4d32e602c")
-
-st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
-
-
+    st.success(frase)  
+    
 # ---------- RODAPÉ ----------
 st.markdown("---")
 st.markdown('<p class="small-muted">Programa Saúde da FE • Feito com carinho em Streamlit 🌸</p>', unsafe_allow_html=True)
