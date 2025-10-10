@@ -144,7 +144,6 @@ if enviar:
 # --- Mensagem final motivacional ---
 st.markdown("---")
 st.subheader("💖 Mensagem de Motivação")
-st.markdown("### 🎬 É se amando que tudo se transforma ✨")
 # ===================== VÍDEO MOTIVACIONAL =====================
 
 st.markdown("### 🎬 É se amando que tudo se transforma ✨")
