@@ -158,3 +158,6 @@ st.markdown("### 🎬 É se amando que tudo se transforma ✨")
 st.video("https://app.heygen.com/videos/eb44f76d34604cd7b672b7b4d32e602c")
 st.caption("O primeiro passo para cuidar do corpo é cuidar do coração. 💫")
     st.caption("⚠️ Dicas gerais. Para orientações específicas, procure um(a) profissional de saúde.")
+# ==================== VÍDEO MOTIVACIONAL ====================
+st.markdown("## 🌸 Mensagem em Vídeo")
+st.video("https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/main/vídeo%20amor%20próprio.mp4")
