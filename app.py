@@ -104,11 +104,25 @@ if enviar:
     st.markdown("### 💖 Mensagem motivacional")
     st.success(frase)
 
-    # ---------- VÍDEO MOTIVACIONAL ----------
-    st.markdown("---")
-    st.markdown("### 🎬 É se amando que tudo se transforma ✨")
-    st.video("https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/main/video_amor_proprio.mp4")
-    st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
+# ===================== VÍDEO MOTIVACIONAL =====================
+from pathlib import Path
+
+st.markdown("### 🎬 É se amando que tudo se transforma ✨")
+
+# Ajuste estes dois nomes de acordo com o seu repositório:
+BRANCH = "principal"  # use "main" se for o seu caso
+VIDEO_FILENAME = "video_amor_proprio.mp4"  # troque se o seu arquivo for "video_amor_proprio1.mp4"
+
+# 1) Tenta tocar a partir do arquivo local no repositório (mais confiável)
+video_path = Path(VIDEO_FILENAME)
+if video_path.exists():
+    st.video(str(video_path))
+else:
+    # 2) Se não estiver local, usa o RAW do GitHub
+    RAW_LINK = f"https://raw.githubusercontent.com/rosalva1911-eng/programa-saude-fe/{BRANCH}/{VIDEO_FILENAME}"
+    st.video(RAW_LINK)
+
+st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
 
 # ---------- RODAPÉ ----------
 st.markdown("---")
