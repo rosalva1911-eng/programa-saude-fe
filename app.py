@@ -151,5 +151,10 @@ if enviar:
     st.markdown("### 💬 Mensagem motivacional")
     nome_display = nome.strip() if nome.strip() else "Você"
     st.success(frase_motivacional(nome_display, classe))
-
+# --- Mensagem final motivacional ---
+st.markdown("---")
+st.subheader("💖 Mensagem de Motivação")
+st.markdown("### 🎬 É se amando que tudo se transforma ✨")
+st.video("https://app.heygen.com/videos/eb44f76d34604cd7b672b7b4d32e602c")
+st.caption("O primeiro passo para cuidar do corpo é cuidar do coração. 💫")
     st.caption("⚠️ Dicas gerais. Para orientações específicas, procure um(a) profissional de saúde.")
