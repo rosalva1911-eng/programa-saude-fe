@@ -54,16 +54,50 @@ def calcular_peso_ideal(altura: float, sexo: str) -> float:
     else:  # Feminino (padrão)
         return 45.5 + 2.3 * (polegadas - 60)
 
+import random
+
 def frase_motivacional(nome: str, imc_class: str) -> str:
     base = f"{nome}, "
-    frases = {
-        "Abaixo do peso": base + "seu corpo é único. Vamos fortalecer com calma: constância vence pressa. 🌱",
-        "Peso adequado": base + "você está no caminho certo! Mantenha o equilíbrio: movimento, água e descanso. ✨",
-        "Sobrepeso": base + "cada passo conta. Foque no progresso diário — pequenas vitórias geram grandes resultados. 💪",
-        "Obesidade": base + "respeite o seu tempo. Com consistência e cuidado, você vai mais longe do que imagina. 🌟",
-        "Altura inválida": "Preencha seus dados corretamente para eu te ajudar direitinho. 🙂",
+    
+    frases_gerais = [
+        "você é sua melhor versão em construção. 🌸",
+        "o equilíbrio vem com o amor-próprio e a constância. 🌿",
+        "pequenos cuidados diários constroem grandes mudanças. 💧",
+        "seu corpo agradece cada escolha de bem-estar. ✨",
+        "um passo de cada vez — mas nunca pare. 💪",
+        "o autocuidado é a forma mais bonita de amor. 💖",
+        "você merece se sentir leve, forte e feliz. ☀️",
+        "cultive gentileza com você mesma todos os dias. 🌷",
+        "respira, confia e continua — você está evoluindo. 🌙",
+        "ser saudável é um ato de amor com quem você é. 🍃"
+    ]
+
+    frases_por_imc = {
+        "Abaixo do peso": [
+            "seu corpo é único. Fortaleça-se com carinho e paciência. 🌱",
+            "cada refeição equilibrada é um gesto de amor por você. 💕",
+        ],
+        "Peso adequado": [
+            "você está vibrando em equilíbrio. Continue se cuidando! 🌸",
+            "mantenha o ritmo: corpo e mente em harmonia. 🌿",
+        ],
+        "Sobrepeso": [
+            "tudo começa com um passo — e você já começou. 💪",
+            "cada treino é um presente para o seu futuro. 🌞",
+        ],
+        "Obesidade": [
+            "gentileza com o processo, consistência com o propósito. 🌷",
+            "com amor e paciência, o impossível vira rotina. ✨",
+        ]
     }
-    return frases.get(imc_class, base + "você consegue! Um dia de cada vez, com carinho por você. 💖")
+
+    # Seleciona frases conforme classificação do IMC
+    frases_escolhidas = frases_por_imc.get(imc_class, frases_gerais)
+    frase = random.choice(frases_escolhidas)
+    return base + frase
+
+    
+
 
 # ===================== ENTRADAS =====================
 with st.form("form_saude"):
