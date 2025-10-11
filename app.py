@@ -25,6 +25,7 @@ st.markdown("""
 st.title("🌸 Programa Saúde da FE")
 st.markdown("_Cuidar do corpo é um ato de amor-próprio._ 💕")
 st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
+st.markdown("<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>", unsafe_allow_html=True)
 st.write("Preencha seus dados e veja suas recomendações personalizadas. 🌿")
 
 # ---------- FUNÇÕES ----------
