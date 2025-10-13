@@ -23,13 +23,13 @@ st.markdown("""
 
 # ---------- TÍTULO ----------
 st.title("🌸 Programa Saúde da FE")
-st.markdown("_Cuidar do corpo é um ato de amor-próprio._ 💕")
+st.markdown("Cuidar do corpo é um ato de amor-próprio. 💕")
 st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
 # ===================== VÍDEO MOTIVACIONAL =====================
 st.markdown("### 💖 Mensagem de Motivação")
 st.markdown("🎬 É se amando que tudo se transforma ✨")
 
-# --- VÍDEO AUTOMÁTICO (YouTube) ---
+# --- VÍDEO DO YOUTUBE (SEM AUTOPLAY) ---
 video_id = "NsPiCrrfsT4"  # só o código do vídeo
 st.markdown(
     f"""
@@ -37,7 +37,7 @@ st.markdown(
         <iframe 
             width="560" 
             height="315" 
-            src="https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&controls=0&loop=1&playlist={video_id}" 
+            src="https://www.youtube.com/embed/{video_id}?controls=1&rel=0&modestbranding=1" 
             title="Mensagem de Motivação"
             frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -129,12 +129,7 @@ if enviar:
 
     st.markdown("### 💖 Mensagem motivacional")
     st.success(frase)  
-# ===================== VÍDEO MOTIVACIONAL =====================
-# ===================== VÍDEO MOTIVACIONAL =====================
-st.markdown("### 💖 Mensagem de Motivação")
-st.markdown("🎬 É se amando que tudo se transforma ✨")
-st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.") 
+
 # ---------- RODAPÉ ----------
 st.markdown("---")
 st.markdown('<p class="small-muted">Programa Saúde da FE • Feito com carinho em Streamlit 🌸</p>', unsafe_allow_html=True)
-
