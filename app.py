@@ -25,8 +25,31 @@ st.markdown("""
 st.title("🌸 Programa Saúde da FE")
 st.markdown("_Cuidar do corpo é um ato de amor-próprio._ 💕")
 st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
-# --- VÍDEO DE AMOR PRÓPRIO ---
-st.video("https://youtube.com/shorts/NsPiCrrfsT4")
+# ===================== VÍDEO MOTIVACIONAL =====================
+st.markdown("### 💖 Mensagem de Motivação")
+st.markdown("🎬 É se amando que tudo se transforma ✨")
+
+# --- VÍDEO AUTOMÁTICO (YouTube) ---
+video_id = "NsPiCrrfsT4"  # só o código do vídeo
+st.markdown(
+    f"""
+    <div style="display:flex; justify-content:center; margin: 20px 0;">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/{video_id}?autoplay=1&mute=1&controls=0&loop=1&playlist={video_id}" 
+            title="Mensagem de Motivação"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen
+            style="border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.2);"
+        ></iframe>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
 st.markdown("<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>", unsafe_allow_html=True)
 st.write("Preencha seus dados e veja suas recomendações personalizadas. 🌿")
 
