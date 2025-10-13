@@ -110,7 +110,7 @@ st.markdown("### 💖 Mensagem de Motivação")
 st.markdown("🎬 É se amando que tudo se transforma ✨")
 
 # Substitua o link abaixo pelo link do seu vídeo no YouTube
-st.video("https://youtube.com/shorts/0KvVwGdddOw?feature=share") # cole aqui o link completo
+st.video("https://youtube.com/shorts/NsPiCrrfsT4?feature=share") # cole aqui o link completo
 
 st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.") 
 # ---------- RODAPÉ ----------
