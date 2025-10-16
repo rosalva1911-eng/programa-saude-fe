@@ -129,7 +129,27 @@ if enviar:
 
     st.markdown("### 💖 Mensagem motivacional")
     st.success(frase)  
+# ---------- BENEFÍCIOS DA KOMBUCHA ----------
+st.markdown("---")
+st.markdown("## 🍹 Benefícios da Kombucha")
+st.image(
+    "https://upload.wikimedia.org/wikipedia/commons/5/5b/Kombucha_SCOBY.jpg",
+    caption="Kombucha artesanal da Fê 🌸",
+    use_container_width=True
+)
 
+st.markdown("""
+A *Kombucha* é uma bebida probiótica natural, rica em enzimas, antioxidantes e micro-organismos benéficos ao intestino.  
+Seu consumo regular pode ajudar a:
+
+✅ Fortalecer o sistema imunológico  
+✅ Melhorar a digestão e equilibrar a flora intestinal  
+✅ Aumentar a energia e a disposição  
+✅ Desintoxicar o organismo naturalmente  
+✅ Promover bem-estar e equilíbrio corpo-mente 🌿  
+
+> 🍶 “Cuidar do corpo é um ato de amor-próprio — e a Kombucha é uma aliada deliciosa nessa jornada.”
+""")
 # ---------- RODAPÉ ----------
 st.markdown("---")
 st.markdown('<p class="small-muted">Programa Saúde da FE • Feito com carinho em Streamlit 🌸</p>', unsafe_allow_html=True)
