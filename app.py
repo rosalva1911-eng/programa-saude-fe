@@ -114,6 +114,26 @@ if enviar:
     classe = classificar_imc(imc)
     agua = calcular_agua_diaria(peso)
     exercicio = calcular_exercicio(imc)
+    def calcular_calorias_diarias(peso: float, altura: float, idade: int, sexo: str, objetivo: str) -> int:
+    """
+    Calcula a quantidade ideal de calorias por dia para atingir o peso desejado.
+    Fórmula baseada na Taxa Metabólica Basal (TMB) e no objetivo do usuário.
+    """
+    # Cálculo da TMB (Taxa Metabólica Basal)
+    if sexo.lower() == "feminino":
+        tmb = 655 + (9.6 * peso) + (1.8 * altura * 100) - (4.7 * idade)
+    else:
+        tmb = 66 + (13.7 * peso) + (5 * altura * 100) - (6.8 * idade)
+
+    # Ajuste conforme o objetivo
+    if objetivo.lower() == "emagrecer":
+        calorias = tmb * 0.85  # déficit de 15%
+    elif objetivo.lower() == "manter":
+        calorias = tmb  # manutenção
+    else:  # ganhar massa
+        calorias = tmb * 1.15  # superávit de 15%
+
+    return int(calorias)
     ideal = calcular_peso_ideal(altura, sexo)
     frase = frase_motivacional(nome.strip() if nome else None, classe)
 
