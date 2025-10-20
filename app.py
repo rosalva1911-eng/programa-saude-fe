@@ -150,6 +150,28 @@ Seu consumo regular pode ajudar a:
 
 > 🍶 “Cuidar do corpo é um ato de amor-próprio — e a Kombucha é uma aliada deliciosa nessa jornada.”
 """)
+# --- Seção: Benefícios do Kefir ---
+def beneficios_kefir():
+    st.title("🌿 Benefícios do Kefir - Saúde da Fê 🍶")
+    
+    st.write("""
+    O kefir é uma bebida fermentada rica em *probióticos*, que ajudam a equilibrar a flora intestinal e fortalecem o sistema imunológico.  
+    É natural, leve e pode ser consumido todos os dias como parte de um estilo de vida saudável. 💚
+    """)
+    
+    st.subheader("✨ Principais Benefícios:")
+    st.markdown("""
+    - Melhora da *digestão* e redução do inchaço abdominal.  
+    - Reforço da *imunidade natural*.  
+    - Auxilia na *absorção de vitaminas e minerais*.  
+    - Fonte de *cálcio, proteínas e vitaminas do complexo B*.  
+    - Pode ajudar no *equilíbrio hormonal e intestinal*.  
+    - Efeito *detox suave*, ajudando a eliminar toxinas.  
+    """)
+
+    st.info("💡 Dica da Fê: Consuma cerca de 100 a 200 ml por dia, de preferência em jejum ou com frutas.")
+    
+    st.success("✨ Cuide da sua saúde naturalmente com amor, leveza e kombucha — o equilíbrio começa de dentro pra fora 🌸")
 # ---------- RODAPÉ ----------
 st.markdown("---")
 st.markdown('<p class="small-muted">Programa Saúde da FE • Feito com carinho em Streamlit 🌸</p>', unsafe_allow_html=True)
