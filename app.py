@@ -1,17 +1,11 @@
 # ==============================
-# 🌸 Programa Saúde da Fe 🌸
+# 🌸 Programa Saúde da Fê 🌸
 # ==============================
-from typing import Any
-
-import streamlit as st
-from pathlib import Path
 import random
+import streamlit as st
 
-# ---------- LIMPAR CACHE ----------
-st.cache_data.clear()
-
-# ---------- CONFIGURAÇÃO ----------
-st.set_page_config(page_title="Programa Saúde da FE", page_icon="💖", layout="centered")
+# ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
+st.set_page_config(page_title="Programa Saúde da Fê", page_icon="💚", layout="centered")
 
 # ---------- ESTILO ----------
 st.markdown("""
@@ -23,15 +17,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------- TÍTULO ----------
-st.title("🌸 Programa Saúde da FE")
+st.title("🌸 Programa Saúde da Fê")
 st.markdown("Cuidar do corpo é um ato de amor-próprio. 💕")
-st.subheader("Calculadora de IMC, Água, Exercício e Peso Ideal")
+st.subheader("Calculadora de IMC, Água, Calorias, Exercício e Peso Ideal")
+
 # ===================== VÍDEO MOTIVACIONAL =====================
 st.markdown("### 💖 Mensagem de Motivação")
 st.markdown("🎬 É se amando que tudo se transforma ✨")
-
-# --- VÍDEO DO YOUTUBE (SEM AUTOPLAY) ---
-video_id = "NsPiCrrfsT4"  # só o código do vídeo
+video_id = "NsPiCrrfsT4"  # código do YouTube
 st.markdown(
     f"""
     <div style="display:flex; justify-content:center; margin: 20px 0;">
@@ -49,65 +42,54 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
 st.markdown(
     "<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>",
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
 st.write("Preencha seus dados e veja suas recomendações personalizadas. 🌿")
 
-
 # ---------- FUNÇÕES ----------
-def calcular_imc(peso: float, altura: float) -> float:
-    if altura <= 0: return 0
-    return peso / (altura ** 2)
-
+def calcular_imc(peso: float, altura_m: float) -> float:
+    if altura_m <= 0: 
+        return 0.0
+    return peso / (altura_m ** 2)
 
 def classificar_imc(imc: float) -> str:
-    if imc < 18.5:
-        return "Abaixo do peso"
-    elif imc < 25:
-        return "Peso adequado"
-    elif imc < 30:
-        return "Sobrepeso"
-    elif imc < 35:
-        return "Obesidade grau I"
-    elif imc < 40:
-        return "Obesidade grau II"
-    else:
-        return "Obesidade grau III"
-
+    if imc < 18.5:  return "Abaixo do peso"
+    if imc < 25:    return "Peso adequado"
+    if imc < 30:    return "Sobrepeso"
+    if imc < 35:    return "Obesidade grau I"
+    if imc < 40:    return "Obesidade grau II"
+    return "Obesidade grau III"
 
 def calcular_agua_diaria(peso: float) -> int:
-    return int(peso * 35)
+    # regra prática: 35 ml por kg
+    return int(round(peso * 35))
 
+def calcular_tmb(sexo_F_ou_M: str, idade: int, peso: float, altura_cm: float) -> int:
+    """Mifflin-St Jeor"""
+    s = (sexo_F_ou_M or "F").upper()
+    if s == "M":
+        tmb = 10 * peso + 6.25 * altura_cm - 5 * idade + 5
+    else:
+        tmb = 10 * peso + 6.25 * altura_cm - 5 * idade - 161
+    return int(round(tmb))
 
 def calcular_exercicio(imc: float) -> str:
-    if imc < 25:
-        return "30 minutos/dia (5x por semana)"
-    elif imc < 30:
-        return "45 minutos/dia (5–6x por semana)"
-    else:
-        return "60 minutos/dia (6x por semana)"
+    if imc < 25:   return "30 min/dia (5x/sem) — foco em constância."
+    if imc < 30:   return "45 min/dia (5–6x/sem) — cardio + força."
+    return "60 min/dia (6x/sem) — começar leve e progredir."
 
+def calcular_peso_ideal(altura_m: float, sexo_F_ou_M: str) -> float:
+    """Devine: base 45.5(F)/50(M) + 0.9kg por cm acima de 152.4"""
+    altura_cm = altura_m * 100
+    s = (sexo_F_ou_M or "F").upper()
+    base = 50.0 if s == "M" else 45.5
+    extra_cm = max(0.0, altura_cm - 152.4)
+    return round(base + 0.9 * extra_cm, 1)
 
-def calcular_peso_ideal(altura: float, sexo: str) -> float:
-    """
-
-    :param altura:
-    :param sexo:
-
-    :return:
-    :rtype: float
-    """
-    altura_cm = altura * 100
-    polegadas = altura_cm / 2.54
-    if sexo.upper() == "M":
-        return 50 + 2.3 * (polegadas - 60)
-    return 45.5 + 2.3 * (polegadas - 60)
-
-
-def frase_motivacional(nome: str, classe: str) -> str:
+def frase_motivacional(nome: str | None, classe_imc: str) -> str:
     frases = [
         "É se amando que tudo se transforma. 💫",
         "Seu corpo é sua casa: trate-o com carinho. 🌿",
@@ -116,20 +98,50 @@ def frase_motivacional(nome: str, classe: str) -> str:
         "Beber água é um abraço por dentro. 💧"
     ]
     base = random.choice(frases)
-    return f"{nome}, {base}" if nome else base
+    pessoa = (nome or "Você").strip().split()[0].capitalize()
+    return f"{pessoa}, {base}"
 
+def calcular_calorias_diarias(tmb: int, objetivo: str, altura_m: float, sexo_F_ou_M: str, nome: str | None = None):
+    """
+    Ajusta calorias conforme objetivo e retorna (calorias, peso_ideal, frase).
+    """
+    obj = (objetivo or "").strip().lower()
+    if obj == "emagrecer":
+        calorias = tmb * 0.85       # ~15% déficit
+    elif obj == "manter":
+        calorias = tmb              # manutenção
+    else:
+        calorias = tmb * 1.15       # ~15% superávit
+
+    ideal = calcular_peso_ideal(altura_m, sexo_F_ou_M)
+    frase = frase_motivacional(nome, classificar_imc(calcular_imc(peso=70, altura_m=1.7)))  # dummy classe p/ tom positivo
+    return int(round(calorias)), ideal, frase
+
+def beneficios_kefir():
+    st.subheader("🌿 Benefícios do Kefir")
+    st.markdown("""
+- Melhora da *digestão* e redução do inchaço abdominal.  
+- Reforço da *imunidade*.  
+- Auxilia na *absorção de vitaminas e minerais*.  
+- Fonte de *cálcio, proteínas e vitaminas do complexo B*.  
+- Pode ajudar no *equilíbrio intestinal*.  
+- Efeito *detox suave*.  
+""")
+    st.info("💡 Dica da Fê: 100–200 ml/dia, em jejum ou com frutas.")
 
 # ---------- FORMULÁRIO ----------
 with st.form("form_saude"):
     col1, col2 = st.columns(2)
     with col1:
         nome = st.text_input("Nome")
-        idade = st.number_input("Idade", 0, 120, 30)
-        sexo: Any | None = st.selectbox("Sexo", ["F", "M"])
+        idade = st.number_input("Idade", min_value=10, max_value=100, value=30, step=1)
+        sexo_label = st.selectbox("Sexo", ["Feminino", "Masculino"])
+        sexo = "F" if sexo_label == "Feminino" else "M"
     with col2:
-        altura = st.number_input("Altura (m)", 0.0, 2.30, 1.65, step=0.01)
-        peso = st.number_input("Peso (kg)", 0.0, 300.0, 65.0, step=0.1)
+        altura = st.number_input("Altura (m)", min_value=1.30, max_value=2.30, value=1.65, step=0.01, format="%.2f")
+        peso = st.number_input("Peso (kg)", min_value=30.0, max_value=300.0, value=65.0, step=0.1, format="%.1f")
 
+    objetivo = st.selectbox("Objetivo", ["Emagrecer", "Manter", "Ganhar massa"])
     enviar = st.form_submit_button("Calcular ✅")
 
 # ---------- RESULTADOS ----------
@@ -137,50 +149,29 @@ if enviar:
     imc = calcular_imc(peso, altura)
     classe = classificar_imc(imc)
     agua = calcular_agua_diaria(peso)
-    exercicio = calcular_exercicio(imc)
+    tmb = calcular_tmb(sexo, idade, peso, altura * 100)
 
+    # >>> calcula calorias, peso ideal e frase ANTES de mostrar os cards
+    calorias, ideal, frase = calcular_calorias_diarias(tmb, objetivo, altura, sexo, nome)
 
-    def calcular_calorias_diarias(peso: float, altura: float, idade: int, sexo: str, objetivo: str) -> int:
-        """
-        Calcula a quantidade ideal de calorias por dia para atingir o peso desejado.
-        Fórmula baseada na Taxa Metabólica Basal (TMB) e no objetivo do usuário.
-        """
-
-
-def calcular_calorias_diarias(tmb, objetivo, altura, sexo, nome=None):
-    """
-    Calcula as calorias diárias ajustadas conforme o objetivo,
-    e retorna também o peso ideal e uma frase motivacional personalizada.
-    """
-
-    # Ajuste conforme o objetivo
-    if objetivo.lower() == "emagrecer":
-        calorias = tmb * 0.85  # déficit de 15%
-    elif objetivo.lower() == "manter":
-        calorias = tmb         # manutenção
-    else:
-        calorias = tmb * 1.15  # superávit para ganhar massa
-
-    # Cálculo do peso ideal
-    ideal = calcular_peso_ideal(altura, sexo)
-
-    # Frase motivacional
-    frase = frase_motivacional(nome.strip(), sexo) if nome else "Siga firme, o progresso é diário!"
-
-    # Retorna todos os valores
-    return int(calorias), ideal, frase
     st.markdown("---")
     st.markdown("### 📊 Resultados")
-    c1, c2, c3 = st.columns(3)
-    c1.metric("IMC", f"{imc:.2f}", classe)
-    c2.metric("Água/dia", f"{agua} ml")
-    c3.metric("Peso ideal", f"{ideal:.1f} kg")
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        st.metric("IMC", f"{imc:.2f}", classe)
+    with c2:
+        st.metric("Água/dia", f"{agua} ml")
+    with c3:
+        st.metric("Peso ideal", f"{ideal:.1f} kg")
+    with c4:
+        st.metric("Calorias/dia", f"{calorias} kcal")
 
     st.markdown("### 🏃 Recomendação de exercício")
-    st.write(exercicio)
+    st.write(calcular_exercicio(imc))
 
     st.markdown("### 💖 Mensagem motivacional")
     st.success(frase)
+
 # ---------- BENEFÍCIOS DA KOMBUCHA ----------
 st.markdown("---")
 st.markdown("## 🍹 Benefícios da Kombucha")
@@ -189,51 +180,24 @@ st.image(
     caption="Kombucha artesanal da Fê 🌸",
     use_container_width=True
 )
-
 st.markdown("""
 A *Kombucha* é uma bebida probiótica natural, rica em enzimas, antioxidantes e micro-organismos benéficos ao intestino.  
-Seu consumo regular pode ajudar a:
+Consumo regular pode ajudar a:
 
 ✅ Fortalecer o sistema imunológico  
 ✅ Melhorar a digestão e equilibrar a flora intestinal  
 ✅ Aumentar a energia e a disposição  
-✅ Desintoxicar o organismo naturalmente  
-✅ Promover bem-estar e equilíbrio corpo-mente 🌿  
+✅ Desintoxicar naturalmente  
+✅ Promover bem-estar corpo-mente 🌿  
 
 > 🍶 “Cuidar do corpo é um ato de amor-próprio — e a Kombucha é uma aliada deliciosa nessa jornada.”
 """)
 
-
-# --- Seção: Benefícios do Kefir ---
-def beneficios_kefir():
-    st.title("🌿 Benefícios do Kefir - Saúde da Fê 🍶")
-
-    st.write("""
-    O kefir é uma bebida fermentada rica em *probióticos*, que ajudam a equilibrar a flora intestinal e fortalecem o sistema imunológico.  
-    É natural, leve e pode ser consumido todos os dias como parte de um estilo de vida saudável. 💚
-    """)
-
-    st.subheader("✨ Principais Benefícios:")
-    st.markdown("""
-    - Melhora da *digestão* e redução do inchaço abdominal.  
-    - Reforço da *imunidade natural*.  
-    - Auxilia na *absorção de vitaminas e minerais*.  
-    - Fonte de *cálcio, proteínas e vitaminas do complexo B*.  
-    - Pode ajudar no *equilíbrio hormonal e intestinal*.  
-    - Efeito *detox suave*, ajudando a eliminar toxinas.  
-    """)
-
-    st.info("💡 Dica da Fê: Consuma cerca de 100 a 200 ml por dia, de preferência em jejum ou com frutas.")
-
-    st.success(
-        "✨ Cuide da sua saúde naturalmente com amor, leveza e kombucha — o equilíbrio começa de dentro pra fora 🌸")
-
+# ---------- BENEFÍCIOS DO KEFIR (opcional em expander) ----------
+with st.expander("🍶 Ver benefícios do Kefir"):
+    beneficios_kefir()
 
 # ---------- RODAPÉ ----------
 st.markdown("---")
-
-
-
-
-
+st.caption("Dica Fê: priorize sono, hidratação e fibras. Kombucha geladinha ajuda a rotina ficar gostosa! 🫶")
 
