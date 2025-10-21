@@ -147,33 +147,28 @@ if enviar:
         """
 
 
-    def calcular_calorias_diarias(tmb, objetivo, altura, sexo, nome=None):
-        """
-        Calcula as calorias diárias ajustadas conforme o objetivo,
-        e retorna também o peso ideal e uma frase motivacional personalizada.
-        """
+def calcular_calorias_diarias(tmb, objetivo, altura, sexo, nome=None):
+    """
+    Calcula as calorias diárias ajustadas conforme o objetivo,
+    e retorna também o peso ideal e uma frase motivacional personalizada.
+    """
 
-        # Ajuste conforme o objetivo
-        if objetivo.lower() == "emagrecer":
-            calorias = tmb * 0.85  # déficit de 15%
-        elif objetivo.lower() == "manter":
-            calorias = tmb  # manutenção
-        else:
-            calorias = tmb * 1.15  # superávit para ganhar massa
+    # Ajuste conforme o objetivo
+    if objetivo.lower() == "emagrecer":
+        calorias = tmb * 0.85  # déficit de 15%
+    elif objetivo.lower() == "manter":
+        calorias = tmb         # manutenção
+    else:
+        calorias = tmb * 1.15  # superávit para ganhar massa
 
-        # Cálculo do peso ideal
-        ideal = calcular_peso_ideal(altura, sexo)
+    # Cálculo do peso ideal
+    ideal = calcular_peso_ideal(altura, sexo)
 
-        # Frase motivacional
-        frase = frase_motivacional(nome.strip(), sexo) if nome else "Siga firme, o progresso é diário!"
+    # Frase motivacional
+    frase = frase_motivacional(nome.strip(), sexo) if nome else "Siga firme, o progresso é diário!"
 
-        # Retorna tudo organizado
-        return int(calorias), ideal, frase
-
-
-
-
-
+    # Retorna todos os valores
+    return int(calorias), ideal, frase
     st.markdown("---")
     st.markdown("### 📊 Resultados")
     c1, c2, c3 = st.columns(3)
