@@ -1,11 +1,11 @@
-# ==============================
-# 🌸 Programa Saúde da Fê 🌸
-# ==============================
+# =================================
+# 🌸 Eu Ja Existia Antes De Você🌸
+# =================================
 import random
 import streamlit as st
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
-st.set_page_config(page_title="Programa Saúde da Fê", page_icon="💚", layout="centered")
+st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
 
 # ---------- ESTILO ----------
 st.markdown("""
@@ -17,9 +17,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ---------- TÍTULO ----------
-st.title("🌸 Programa Saúde da Fê")
-st.markdown("Cuidar do corpo é um ato de amor-próprio. 💕")
-st.subheader("Calculadora de IMC, Água, Calorias, Exercício e Peso Ideal")
+st.title("📘 Eu Já Existia Antes de Você")
+st.markdown("*Um caminho de volta para si*")
+st.caption("Autora: Fhernânda Rocha")
+
 
 # ===================== VÍDEO MOTIVACIONAL =====================
 st.markdown("### 💖 Mensagem de Motivação")
