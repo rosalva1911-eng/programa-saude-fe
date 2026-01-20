@@ -1,8 +1,24 @@
 # =================================
 # 🌸 Eu Ja Existia Antes De Você🌸
 # =================================
-import random
-import streamlit as st
+
+# ---- MENU PRINCIPAL (NÃO APAGA NADA) ----
+menu = st.sidebar.radio(
+    "Menu",
+    ["📘 Livro", "💚 Saúde & Ferramentas"],
+)
+
+def render_ferramentas():
+    # ✅ AQUI DENTRO você vai colar TODO o código atual do seu app
+    # (vídeo, balança, cálculos, tudo)
+    pass
+
+def render_livro():
+    st.title("📘 Eu Já Existia Antes de Você")
+    st.markdown("Um caminho de volta para si")
+    st.caption("Autora: Fhernânda Rocha")
+
+    st.image("assets/00_capa.png", use_container_width=True)
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
 st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
@@ -201,4 +217,17 @@ with st.expander("🍶 Ver benefícios do Kefir"):
 # ---------- RODAPÉ ----------
 st.markdown("---")
 st.caption("Dica Fê: priorize sono, hidratação e fibras. Kombucha geladinha ajuda a rotina ficar gostosa! 🫶")
+if menu == "📘 Livro":
+    render_livro()
+elif menu == "💚 Saúde & Ferramentas":
+    render_ferramentas()
+# ==============================
+# 📘 LIVRO — EM CONSTRUÇÃO
+# ==============================
 
+def render_livro():
+    st.title("📘 Eu Já Existia Antes de Você")
+    st.markdown("*Um caminho de volta para si*")
+    st.caption("Autora: Fhernânda Rocha")
+
+    st.image("assets/00_capa.png", use_container_width=True)
