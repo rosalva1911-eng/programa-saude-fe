@@ -29,6 +29,14 @@ def render_livro():
         "Este livro começa no momento em que você se lembra de si."
     )
     st.image("assets/01_lembrete.png", use_container_width=True)
+    # CAPÍTULO 1 — O DESPERTAR
+st.markdown("---")
+st.subheader("Capítulo 1 — O Despertar")
+st.markdown(
+    "O despertar começa quando você percebe que não era amor demais. "
+    "Era a ausência de si. Aqui, a consciência começa a se formar."
+)
+st.image("assets/02_lei_atracao_espelho.png", use_container_width=True)
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
 st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
