@@ -18,7 +18,17 @@ def render_livro():
     st.markdown("Um caminho de volta para si")
     st.caption("Autora: Fhernânda Rocha")
 
+    # CAPA
     st.image("assets/00_capa.png", use_container_width=True)
+
+    # ABERTURA
+    st.markdown("---")
+    st.subheader("Antes de tudo, um lembrete")
+    st.markdown(
+        "Antes de qualquer relacionamento, você já era alguém. "
+        "Este livro começa no momento em que você se lembra de si."
+    )
+    st.image("assets/01_lembrete.png", use_container_width=True)
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
 st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
