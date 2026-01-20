@@ -37,6 +37,30 @@ st.markdown(
     "Era a ausência de si. Aqui, a consciência começa a se formar."
 )
 st.image("assets/02_lei_atracao_espelho.png", use_container_width=True)
+# CAPÍTULO 2 — QUANDO VOCÊ SE ABANDONA
+st.markdown("---")
+st.subheader("Capítulo 2 — Quando você se abandona")
+st.markdown(
+    "Nem sempre o fim dói apenas pela ausência do outro. "
+    "Muitas vezes, dói porque, no caminho, você se deixou para trás."
+)
+
+# Página 1
+st.image("assets/03_quando_amor_termina.png", use_container_width=True)
+
+# Página 2
+st.markdown(
+    "Você tentou compreender, sustentar e não perder. "
+    "E, aos poucos, foi se afastando de quem você era."
+)
+st.image("assets/04_onde_se_perdeu.png", use_container_width=True)
+
+# Página 3
+st.markdown(
+    "Sentir não é falha. Amar não é erro. "
+    "O que machuca é permanecer onde não há reciprocidade."
+)
+st.image("assets/05_voce_nao_falhou.png", use_container_width=True)
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
 st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
