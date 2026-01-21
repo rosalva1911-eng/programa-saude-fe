@@ -98,7 +98,111 @@ st.markdown(
     "Reconhecer o próprio valor é o ponto onde tudo se reorganiza. "
     "Você não precisa diminuir quem você é para caber em ninguém."
 )
-st.image("assets/09_reconheca_valor.png", use_container_width=True)                   
+# CAPÍTULO 5 — REDES DE SUSTENTAÇÃO
+st.markdown("---")
+st.subheader("Capítulo 5 — Redes de sustentação")
+st.markdown(
+    "Voltar para si não é caminhar sozinha. "
+    "As relações saudáveis sustentam, acolhem e lembram quem você é "
+    "quando o mundo parece pesado demais."
+)
+st.image("assets/10_amizades.png", use_container_width=True)                   
+st.image("assets/09_reconheca_valor.png", use_container_width=True)
+ # CAPÍTULO 6 — PRÁTICAS DE CONTINUIDADE
+st.markdown("---")
+st.subheader("Capítulo 6 — Práticas de continuidade")
+st.markdown(
+    "Consciência sem prática se perde. "
+    "Aqui, você transforma o que entendeu em ações simples, possíveis e sustentáveis."
+)
+
+# Página 1 — Checklist
+st.markdown(
+    "Pequenas escolhas diárias constroem grandes mudanças. "
+    "Este checklist é um convite para se escolher todos os dias."
+)
+st.image("assets/11_checklist.png", use_container_width=True)
+
+# Página 2 — Carta explicativa
+st.markdown(
+    "Escrever é uma forma de escutar a si mesma. "
+    "Esta carta é um gesto de cuidado com quem você está se tornando."
+)
+st.image("assets/12_como_escrever_carta.png", use_container_width=True)
+
+# Página 3 — Carta em branco
+st.markdown(
+    "Agora, a palavra é sua. "
+    "Escreva sem pressa, sem censura e com verdade."
+)
+# CAPÍTULO 7 — SAÚDE É AUTOCUIDADO
+st.markdown("---")
+st.subheader("Capítulo 7 — Saúde é autocuidado")
+st.markdown(
+    "Cuidar da saúde não é cobrança nem punição. "
+    "É presença no corpo, escuta dos sinais e respeito aos próprios limites."
+)
+
+# Página 1
+st.markdown(
+    "O corpo é a casa onde a sua energia habita. "
+    "Cuidar dele é um gesto de respeito e amor-próprio."
+)
+st.image("assets/15_saude_cuidar_corpo.png", use_container_width=True)
+
+# Página 2
+st.markdown(
+    "Cuidado de verdade não machuca, não exige perfeição "
+    "e não nasce da culpa. Ele nasce do acolhimento."
+)
+st.image("assets/16_saude_cuidado_verdade.png", use_container_width=True)
+
+# Página 3
+st.markdown(
+    "O corpo fala o tempo todo. "
+    "Aprender a escutá-lo muda a forma como você vive."
+)
+st.image("assets/17_saude_escute_corpo.png", use_container_width=True)
+
+# Página 4
+st.markdown(
+    "Movimento é diálogo com o corpo, não castigo. "
+    "Escolha se mover por você, não contra você."
+)
+st.image("assets/18_saude_movimente_se.png", use_container_width=True)
+
+# Página 5
+st.markdown(
+    "Quando você se move com presença, "
+    "o corpo responde com mais vitalidade e equilíbrio."
+)
+st.image("assets/19_saude_movimento_escuta.png", use_container_width=True)
+
+# Página 6
+st.markdown(
+    "Respeitar o próprio ritmo é um dos maiores atos de autocuidado. "
+    "Seu corpo sabe o tempo certo das coisas."
+)
+st.image("assets/20_saude_respeite_ritmo.png", use_container_width=True)                   
+st.image("assets/13_carta_futuro.png", use_container_width=True) 
+# CAPÍTULO FINAL — PERMITA-SE FLORESCER
+st.markdown("---")
+st.subheader("Permita-se florescer")
+st.markdown(
+    "Você não chegou até aqui por acaso. "
+    "Cada página lida foi um passo de volta para si.\n\n"
+    "Florescer não é virar outra pessoa. "
+    "É lembrar quem você sempre foi antes de se esquecer.\n\n"
+    "Permita-se crescer no seu tempo, "
+    "honrar suas emoções, respeitar seus ciclos "
+    "e escolher caminhos que sustentem quem você é.\n\n"
+    "Que você siga se escolhendo, "
+    "com gentileza, coragem e verdade.\n\n"
+    "Você já existia antes de qualquer dor. "
+    "E continuará existindo — agora, mais inteira."
+)
+st.image("assets/21_permitase_florescer.png", use_container_width=True)                   
+                   
 # ---------- ESTILO ----------
 st.markdown("""
 <style>
