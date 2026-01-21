@@ -1,12 +1,24 @@
- def render_livro():
+import streamlit as st
+import random
+
+st.set_page_config(
+    page_title="Eu Já Existia Antes de Você",
+    page_icon="💚",
+    layout="centered"
+)
+
+menu = st.sidebar.radio(
+    "Menu",
+    ["📘 Livro", "💚 Saúde & Ferramentas"]
+) 
+def render_livro():
     st.title("📘 Eu Já Existia Antes de Você")
-    st.markdown("*Um caminho de volta para si*")
+    st.markdown("**Um caminho de volta para si**")
     st.caption("Autora: Fhernânda Rocha")
 
     # CAPA
     st.image("assets/00_capa.png", use_container_width=True)
 
-    # -------------------------------
     # CAPÍTULO 1 — O DESPERTAR
     st.markdown("---")
     st.subheader("Capítulo 1 — O Despertar")
@@ -15,7 +27,6 @@
         "Era a ausência de si. Aqui, a consciência começa a se formar."
     )
     st.image("assets/02_lei_atracao_espelho.png", use_container_width=True)
-
     # -------------------------------
     # CAPÍTULO 2 — QUANDO VOCÊ SE ABANDONA
     st.markdown("---")
