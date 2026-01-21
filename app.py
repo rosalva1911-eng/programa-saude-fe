@@ -74,6 +74,31 @@ st.markdown(
     "Aqui, você começa a assumir a própria responsabilidade sem culpa."
 )
 st.image("assets/06_lei_atracao_reflexiva.png", use_container_width=True)
+                   
+# CAPÍTULO 4 — O RETORNO PARA SI
+st.markdown("---")
+st.subheader("Capítulo 4 — O retorno para si")
+st.markdown(
+    "Retornar para si é um movimento de coragem. "
+    "É parar de esperar que o outro mude e começar a se escolher."
+)
+
+# Página 1
+st.image("assets/07_nao_suplicar.png", use_container_width=True)
+
+# Página 2
+st.markdown(
+    "Parar de se abandonar é um compromisso diário. "
+    "É respeitar limites, necessidades e o próprio ritmo."
+)
+st.image("assets/08_parar_abandonar.png", use_container_width=True)
+
+# Página 3
+st.markdown(
+    "Reconhecer o próprio valor é o ponto onde tudo se reorganiza. "
+    "Você não precisa diminuir quem você é para caber em ninguém."
+)
+st.image("assets/09_reconheca_valor.png", use_container_width=True)                   
 # ---------- ESTILO ----------
 st.markdown("""
 <style>
