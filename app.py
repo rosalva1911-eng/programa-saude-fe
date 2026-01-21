@@ -63,8 +63,17 @@ st.markdown(
 st.image("assets/05_voce_nao_falhou.png", use_container_width=True)
 
 # ---------- CONFIGURAÇÃO (precisa ser uma das primeiras linhas) ----------
-st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered")
-
+st.set_page_config(page_title="Eu Já Existia Antes deVocê", page_icon="💚", layout="centered" 
+                   
+# CAPÍTULO 3 — A ENERGIA NÃO MENTE
+st.markdown("---")
+st.subheader("Capítulo 3 — A energia não mente")
+st.markdown(
+    "A energia não responde ao que você deseja, "
+    "ela responde ao que você sustenta emocionalmente. "
+    "Aqui, você começa a assumir a própria responsabilidade sem culpa."
+)
+st.image("assets/06_lei_atracao_reflexiva.png", use_container_width=True)
 # ---------- ESTILO ----------
 st.markdown("""
 <style>
