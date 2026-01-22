@@ -1,5 +1,5 @@
+
 import streamlit as st
-import random
 
 st.set_page_config(
     page_title="Eu Já Existia Antes de Você",
@@ -7,10 +7,6 @@ st.set_page_config(
     layout="centered"
 )
 
-menu = st.sidebar.radio(
-    "Menu",
-    ["📘 Livro", "💚 Saúde & Ferramentas"]
-)
 # ==============================
 # 📘 LIVRO — EU JÁ EXISTIA ANTES DE VOCÊ
 # ==============================
@@ -122,14 +118,10 @@ st.markdown(
 )
 st.image("assets/11_checklist.png", use_container_width=True)
 
-st.markdown(
-    "Escrever é uma forma de escutar a si mesma."
-)
+st.markdown("Escrever é uma forma de escutar a si mesma.")
 st.image("assets/12_como_escrever_carta.png", use_container_width=True)
 
-st.markdown(
-    "Agora, a palavra é sua."
-)
+st.markdown("Agora, a palavra é sua.")
 st.image("assets/13_carta_futuro.png", use_container_width=True)
 
 # ------------------------------
@@ -159,4 +151,3 @@ st.markdown(
     "É lembrar quem você sempre foi."
 )
 st.image("assets/21_permitase_florescer.png", use_container_width=True)
- 
