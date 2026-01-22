@@ -1,3 +1,16 @@
+import streamlit as st
+import random
+
+st.set_page_config(
+    page_title="Eu Já Existia Antes de Você",
+    page_icon="💚",
+    layout="centered"
+)
+
+menu = st.sidebar.radio(
+    "Menu",
+    ["📘 Livro", "💚 Saúde & Ferramentas"]
+)
 # ==============================
 # 📘 LIVRO — EU JÁ EXISTIA ANTES DE VOCÊ
 # ==============================
