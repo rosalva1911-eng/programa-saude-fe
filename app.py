@@ -29,6 +29,32 @@ st.caption("Autora: Fhernânda Rocha")
 # ==============================
 imagem_com_zoom("00_capa.png.png")
 
+def video_motivacional(video_id="NsPiCrrfsT4"):
+    st.markdown("### 💖 Mensagem de Motivação")
+    st.markdown("🎬 É se amando que tudo se transforma ✨")
+    st.markdown(
+        f"""
+        <div style="display:flex; justify-content:center; margin: 20px 0;">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/{video_id}?controls=1&rel=0&modestbranding=1" 
+                title="Mensagem de Motivação"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                style="border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.2);"
+            ></iframe>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    st.caption("💫 O primeiro passo para cuidar do corpo é cuidar do coração.")
+    st.markdown(
+        "<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>",
+        unsafe_allow_html=True
+    )
+
 # ==============================
 # ABERTURA
 # ==============================
