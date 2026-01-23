@@ -144,3 +144,70 @@ st.markdown(
     "Escreva sem pressa, sem censura e com verdade."
 )
 imagem_com_zoom("13_carta_futuro.png.jpg")
+
+# ==============================
+# CAPÍTULO 7 — SAÚDE É AUTOCUIDADO
+# ==============================
+st.markdown("---")
+st.subheader("Capítulo 7 — Saúde é autocuidado")
+st.markdown(
+    "Cuidar da saúde não é cobrança nem punição.\n\n"
+    "É presença no corpo, escuta dos sinais e respeito aos próprios limites."
+)
+
+st.markdown(
+    "O corpo é a casa onde a sua energia habita.\n\n"
+    "Cuidar dele é um gesto de respeito e amor-próprio."
+)
+imagem_com_zoom("15_saude_cuidar_corpo.png")
+
+st.markdown(
+    "Cuidado de verdade não machuca, não exige perfeição "
+    "e não nasce da culpa.\n\n"
+    "Ele nasce do acolhimento."
+)
+imagem_com_zoom("16_saude_cuidado_verdade.png")
+
+st.markdown(
+    "O corpo fala o tempo todo.\n\n"
+    "Aprender a escutá-lo muda a forma como você vive."
+)
+imagem_com_zoom("17_saude_escute_corpo.png")
+
+st.markdown(
+    "Movimento é diálogo com o corpo, não castigo.\n\n"
+    "Escolha se mover por você, não contra você."
+)
+imagem_com_zoom("18_saude_movivente-se.png")
+
+st.markdown(
+    "Quando você se move com presença, "
+    "o corpo responde com mais vitalidade e equilíbrio."
+)
+imagem_com_zoom("19_saude_movimento_escuta.png")
+
+st.markdown(
+    "Respeitar o próprio ritmo é um dos maiores atos de autocuidado.\n\n"
+    "Seu corpo sabe o tempo certo das coisas."
+)
+imagem_com_zoom("20_saude_respeite_ritmo.png")
+
+# ==============================
+# ENCERRAMENTO — PERMITA-SE FLORESCER
+# ==============================
+st.markdown("---")
+st.subheader("Permita-se florescer")
+st.markdown(
+    "Você não chegou até aqui por acaso.\n\n"
+    "Cada página lida foi um passo de volta para si.\n\n"
+    "Florescer não é virar outra pessoa.\n"
+    "É lembrar quem você sempre foi antes de se esquecer.\n\n"
+    "Permita-se crescer no seu tempo,\n"
+    "honrar suas emoções,\n"
+    "respeitar seus ciclos\n"
+    "e escolher caminhos que sustentem quem você é.\n\n"
+    "Você já existia antes de qualquer dor.\n"
+    "E continuará existindo — agora, mais inteira."
+)
+
+imagem_com_zoom("21_permitase_florescer.png")
