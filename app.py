@@ -94,6 +94,7 @@ st.markdown(
     "Relações saudáveis sustentam, acolhem e lembram quem você é "
     "quando o mundo parece pesado demais."
 )
+st.image("10_amizades.png.jpg", use_container_width=True)
 
 # ------------------------------
 # CAPÍTULO 6 — PRÁTICAS DE CONTINUIDADE
@@ -123,4 +124,4 @@ st.markdown(
     "Escreva sem pressa, sem censura e com verdade."
 )
 st.image("13_carta_futuro.png.jpg", use_container_width=True)
-st.image("10_amizades.png.jpg", use_container_width=True)
+
