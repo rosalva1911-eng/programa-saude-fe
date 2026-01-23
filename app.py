@@ -26,6 +26,7 @@ st.markdown(
 )
 
 st.image("02_lei_atracao_espelho.png.jpg", use_container_width=True)
+
 # ------------------------------
 # CAPÍTULO 2 — QUANDO VOCÊ SE ABANDONA
 # ------------------------------
