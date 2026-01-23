@@ -83,3 +83,44 @@ st.markdown(
     "Reconhecer o próprio valor é o ponto onde tudo se reorganiza."
 )
 st.image("09_reconheca_valor.png.jpg", use_container_width=True)
+
+# ------------------------------
+# CAPÍTULO 5 — REDES DE SUSTENTAÇÃO
+# ------------------------------
+st.markdown("---")
+st.subheader("Capítulo 5 — Redes de sustentação")
+st.markdown(
+    "Voltar para si não é caminhar sozinha.\n\n"
+    "Relações saudáveis sustentam, acolhem e lembram quem você é "
+    "quando o mundo parece pesado demais."
+)
+
+# ------------------------------
+# CAPÍTULO 6 — PRÁTICAS DE CONTINUIDADE
+# ------------------------------
+st.markdown("---")
+st.subheader("Capítulo 6 — Práticas de continuidade")
+st.markdown(
+    "Consciência sem prática se perde.\n\n"
+    "Aqui, você transforma o que entendeu em ações simples, "
+    "possíveis e sustentáveis."
+)
+
+st.markdown(
+    "Pequenas escolhas diárias constroem grandes mudanças.\n\n"
+    "Este checklist é um convite para se escolher todos os dias."
+)
+st.image("11_Checklist.png.jpg", use_container_width=True)
+
+st.markdown(
+    "Escrever é uma forma de escutar a si mesma.\n\n"
+    "Esta carta é um gesto de cuidado com quem você está se tornando."
+)
+st.image("12_como_escrever_carta.png.jpg", use_container_width=True)
+
+st.markdown(
+    "Agora, a palavra é sua.\n\n"
+    "Escreva sem pressa, sem censura e com verdade."
+)
+st.image("13_carta_futuro.png.jpg", use_container_width=True)
+st.image("10_amizades.png.jpg", use_container_width=True)
