@@ -17,18 +17,6 @@ def imagem_com_zoom(caminho: str, legenda: str = "🔍 Ampliar imagem para leitu
     with st.expander(legenda):
         st.image(caminho, use_container_width=True)
 
-# ==============================
-# TÍTULO DO LIVRO
-# ==============================
-st.title("📘 Eu Já Existia Antes de Você")
-st.markdown("*Um caminho de volta para si*")
-st.caption("Autora: Fhernânda Rocha")
-
-# ==============================
-# CAPA
-# ==============================
-imagem_com_zoom("00_capa.png.png")
-
 def video_motivacional(video_id="NsPiCrrfsT4"):
     st.markdown("### 💖 Mensagem de Motivação")
     st.markdown("🎬 É se amando que tudo se transforma ✨")
@@ -54,6 +42,19 @@ def video_motivacional(video_id="NsPiCrrfsT4"):
         "<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>",
         unsafe_allow_html=True
     )
+
+# ==============================
+# TÍTULO DO LIVRO
+# ==============================
+st.title("📘 Eu Já Existia Antes de Você")
+st.markdown("*Um caminho de volta para si*")
+st.caption("Autora: Fhernânda Rocha")
+
+# ==============================
+# CAPA
+# ==============================
+imagem_com_zoom("00_capa.png.png")
+video_motivacional()
 
 # ==============================
 # ABERTURA
