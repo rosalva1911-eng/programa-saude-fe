@@ -60,3 +60,26 @@ st.markdown(
     "Ela responde ao que você sustenta emocionalmente."
 )
 st.image("06_lei_atracao_reflexiva.png.jpg", use_container_width=True)
+
+# ------------------------------
+# CAPÍTULO 4 — O RETORNO PARA SI
+# ------------------------------
+st.markdown("---")
+st.subheader("Capítulo 4 — O retorno para si")
+st.markdown(
+    "Retornar para si é um movimento de coragem.\n\n"
+    "É parar de esperar que o outro mude e começar a se escolher."
+)
+
+st.image("07_nao_suplicar.png.jpg", use_container_width=True)
+
+st.markdown(
+    "Parar de se abandonar é um compromisso diário.\n\n"
+    "É respeitar limites, necessidades e o próprio ritmo."
+)
+st.image("14_voltar_para_si.png.jpg", use_container_width=True)
+
+st.markdown(
+    "Reconhecer o próprio valor é o ponto onde tudo se reorganiza."
+)
+st.image("09_reconheca_valor.png.jpg", use_container_width=True)
