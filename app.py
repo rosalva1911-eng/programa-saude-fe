@@ -101,6 +101,9 @@ st.markdown(
 )
 imagem_com_zoom("05_voce_nao_falhou.png.jpg")
 
+# 🎬 PAUSA DE CONSCIÊNCIA — EU JÁ EXISTIA ANTES DE VOCÊ
+video_motivacional("PMLO-uV2s4s")
+
 # ==============================
 # CAPÍTULO 3 — A ENERGIA NÃO MENTE
 # ==============================
@@ -111,9 +114,6 @@ st.markdown(
     "Ela responde ao que você sustenta emocionalmente."
 )
 imagem_com_zoom("06_lei_atracao_reflexiva.png.jpg")
-
-# 🎬 PAUSA DE CONSCIÊNCIA — EU JÁ EXISTIA ANTES DE VOCÊ
-video_motivacional("PMLO-uV2s4s")
 
 # ==============================
 # CAPÍTULO 4 — O RETORNO PARA SI
@@ -134,6 +134,8 @@ imagem_com_zoom("14_voltar_para_si.png.jpg")
 
 st.markdown("Reconhecer o próprio valor é o ponto onde tudo se reorganiza.")
 imagem_com_zoom("09_reconheca_valor.png.jpg")
+
+video_motivacional("LunWAyKmTPU")
 
 # ==============================
 # CAPÍTULO 5 — REDES DE SUSTENTAÇÃO
