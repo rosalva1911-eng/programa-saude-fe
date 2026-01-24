@@ -112,6 +112,9 @@ st.markdown(
 )
 imagem_com_zoom("06_lei_atracao_reflexiva.png.jpg")
 
+# 🎬 PAUSA DE CONSCIÊNCIA — EU JÁ EXISTIA ANTES DE VOCÊ
+video_motivacional("PMLO-uV2s4s")
+
 # ==============================
 # CAPÍTULO 4 — O RETORNO PARA SI
 # ==============================
