@@ -103,8 +103,6 @@ st.sidebar.markdown("✨ **Efeitos visuais**")
 ativar_efeitos = st.sidebar.toggle("Ativar corações/flores", value=True)
 tema_efeito = st.sidebar.selectbox("Tema", ["flores", "corações"])
 
-if ativar_efeitos:
-    efeitos_flutuando(tema_efeito)
 # ==============================
 # TÍTULO DO LIVRO
 # ==============================
