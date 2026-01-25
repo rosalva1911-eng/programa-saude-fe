@@ -100,9 +100,18 @@ def video_motivacional(video_id="NsPiCrrfsT4"):
     )
 st.sidebar.markdown("✨ **Efeitos visuais**")
 
-ativar_efeitos = st.sidebar.toggle("Ativar corações/flores", value=True)
-tema_efeito = st.sidebar.selectbox("Tema", ["flores", "corações"])
+ativar_efeitos = st.sidebar.toggle(
+    "Ativar corações/flores",
+    value=True
+)
 
+tema_efeito = st.sidebar.selectbox(
+    "Tema",
+    ["flores", "corações"]
+)
+
+if ativar_efeitos:
+    efeitos_flutuando(tema_efeito)
 # ==============================
 # TÍTULO DO LIVRO
 # ==============================
@@ -316,6 +325,3 @@ st.markdown(
 )
 imagem_com_zoom("21_permitase_florescer.png")
 
-# ✨ EFEITOS FINAIS (só aqui)
-if ativar_efeitos:
-    efeitos_flutuando(tema_efeitos)
