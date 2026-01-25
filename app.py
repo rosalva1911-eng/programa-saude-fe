@@ -1,5 +1,5 @@
 import streamlit as st
-
+import random
 # ==============================
 # CONFIGURAÇÃO
 # ==============================
@@ -8,74 +8,63 @@ st.set_page_config(
     page_icon="💚",
     layout="centered"
 )
-import streamlit as st
-import random
-
-# ==============================
-# ✨ EFEITOS OPCIONAIS (CORAÇÕES / FLORES)
-# ==============================
-def efeitos_flutuantes(tema: str = "corações"):
-    """tema: 'corações' | 'flores' | 'mix' """
-    if tema == "flores":
-        emojis = ["🌸", "🌷", "🌺", "🌼", "💐"]
-    elif tema == "mix":
-        emojis = ["❤️", "💗", "💖", "💞", "🌸", "🌷", "🌺", "🌼"]
+# =====================
+# FUNÇÃO: EFEITOS FLUTUANTES
+# =====================
+def efeitos_flutuando(tema: str = "flores"):
+    if tema == "corações":
+        itens = ["❤️", "💗", "💖", "💕", "💘"]
     else:
-        emojis = ["❤️", "💗", "💖", "💞"]
+        itens = ["🌸", "🌷", "🌺", "💐", "✨"]
 
-    # Aparece "de vez em quando" (30% das recargas)
-    if random.random() > 0.30:
-        return
+    elementos_html = ""
+    for _ in range(18):
+        left = random.randint(0, 100)
+        delay = random.random() * 4
+        dur = random.uniform(6, 12)
+        size = random.uniform(16, 32)
+        char = random.choice(itens)
+
+        elementos_html += f"""
+        <span class="floaty" style="
+            left:{left}%;
+            animation-delay:{delay}s;
+            animation-duration:{dur}s;
+            font-size:{size}px;
+        ">{char}</span>
+        """
 
     st.markdown(
         f"""
         <style>
-        .floatfx {{
+        .fx-layer {{
             position: fixed;
-            bottom: -40px;
-            animation: floatUp 6s linear forwards;
-            z-index: 9999;
-            opacity: 0.9;
+            inset: 0;
             pointer-events: none;
+            z-index: 999999;
+            overflow: hidden;
         }}
-        @keyframes floatUp {{
-            0%   {{ transform: translateY(0) scale(1); opacity: 0.0; }}
-            10%  {{ opacity: 0.9; }}
-            100% {{ transform: translateY(-110vh) scale(1.4); opacity: 0.0; }}
+        .floaty {{
+            position: absolute;
+            bottom: -40px;
+            opacity: 0.85;
+            animation-name: rise;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }}
+        @keyframes rise {{
+            0% {{ transform: translateY(0); opacity: 0; }}
+            10% {{ opacity: 0.9; }}
+            100% {{ transform: translateY(-110vh); opacity: 0; }}
         }}
         </style>
 
-        <script>
-        (function() {{
-          const items = {emojis};
-          const count = 16;
-
-          for (let i = 0; i < count; i++) {{
-            const el = document.createElement("div");
-            el.className = "floatfx";
-            el.innerText = items[Math.floor(Math.random() * items.length)];
-            el.style.left = (Math.random() * 100) + "vw";
-            el.style.animationDelay = (Math.random() * 2) + "s";
-            el.style.fontSize = (18 + Math.random() * 22) + "px";
-            document.body.appendChild(el);
-            setTimeout(() => el.remove(), 8000);
-          }}
-        }})();
-        </script>
+        <div class="fx-layer">
+            {elementos_html}
+        </div>
         """,
-        unsafe_allow_html=True,
+        unsafe_allow_html=True
     )
-
-# ==============================
-# CONTROLES (OPCIONAL NA SIDEBAR)
-# ==============================
-st.sidebar.markdown("### ✨ Efeitos visuais")
-ativar_efeitos = st.sidebar.toggle("Ativar corações/flores", value=False)
-tema_efeitos = st.sidebar.selectbox("Tema", ["corações", "flores", "mix"], index=2, disabled=not ativar_efeitos)
-
-if ativar_efeitos:
-    efeitos_flutuantes(tema_efeitos)
-
 # ==============================
 # FUNÇÃO: IMAGEM COM ZOOM
 # ==============================
@@ -109,7 +98,13 @@ def video_motivacional(video_id="NsPiCrrfsT4"):
         "<p style='text-align:center; color:#e75480; font-size:1.1em;'>🌸 Cuidar de si é um ato de amor e consciência 🌸</p>",
         unsafe_allow_html=True
     )
+st.sidebar.markdown("✨ **Efeitos visuais**")
 
+ativar_efeitos = st.sidebar.toggle("Ativar corações/flores", value=True)
+tema_efeito = st.sidebar.selectbox("Tema", ["flores", "corações"])
+
+if ativar_efeitos:
+    efeitos_flutuando(tema_efeito)
 # ==============================
 # TÍTULO DO LIVRO
 # ==============================
