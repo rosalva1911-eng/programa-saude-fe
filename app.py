@@ -9,7 +9,7 @@ st.set_page_config(
     layout="centered"
 )
 # =====================
-# FUNÇÃO: EFEITOS FLUTUANTES
+# FUNÇÃO: EFEITOS FLUTUANDO
 # =====================
 def efeitos_flutuando(tema: str = "flores"):
     if tema == "corações":
