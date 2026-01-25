@@ -320,4 +320,4 @@ imagem_com_zoom("21_permitase_florescer.png")
 
 # ✨ EFEITOS FINAIS (só aqui)
 if ativar_efeitos:
-    efeitos_flutuantes(tema_efeitos)
+    efeitos_flutuando(tema_efeitos)
