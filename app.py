@@ -139,6 +139,15 @@ st.markdown(
     "Este livro começa no momento em que você se lembra de si."
 )
 imagem_com_zoom("01_lembrete.png.jpg")
+# 🎬 VÍDEO DE BOAS-VINDAS
+st.markdown("### 🌿 Bem-vinda a este espaço")
+
+video_motivacional("B_Uy5AI9L7E")
+
+st.markdown(
+    "_Este não é um livro para ser lido com pressa. "
+    "Permita-se sentir, pausar e seguir no seu ritmo._"
+)
 
 # ==============================
 # CAPÍTULO 1 — O DESPERTAR
@@ -317,6 +326,15 @@ st.markdown(
     "e escolher caminhos que sustentem quem você é.\n\n"
     "Você já existia antes de qualquer dor.\n"
     "E continuará existindo — agora, mais inteira."
+)
+# 🎬 VÍDEO DE ENCERRAMENTO — PERMITA-SE FLORESCER
+st.markdown("### 🌸 Permita-se florescer")
+
+video_motivacional("r63QJvI4Hvw")
+
+st.markdown(
+    "_Leve com você tudo o que sentiu aqui. "
+    "Siga no seu tempo, com gentileza e verdade._"
 )
 
 imagem_com_zoom("21_permitase_florescer.png")
