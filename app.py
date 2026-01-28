@@ -296,6 +296,10 @@ st.markdown(
     "Seu corpo sabe o tempo certo das coisas."
 )
 imagem_com_zoom("20_saude_respeite_ritmo.png")
+# 🎬 Vídeo de transição — autocuidado
+st.markdown("### 🌿 Uma pausa para refletir")
+
+video_motivacional("ZylGCem4zb0")
 
 # ==============================
 # ENCERRAMENTO — PERMITA-SE FLORESCER
