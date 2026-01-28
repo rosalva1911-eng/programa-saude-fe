@@ -68,10 +68,14 @@ def efeitos_flutuando(tema: str = "flores"):
 # ==============================
 # FUNÇÃO: IMAGEM COM ZOOM
 # ==============================
-def imagem_com_zoom(caminho: str, legenda: str = "🔍 Ampliar imagem para leitura"):
+def imagem_com_zoom(caminho: str, legenda="🔍 Abrir imagem para leitura"):
     st.image(caminho, use_container_width=True)
-    with st.expander(legenda):
-        st.image(caminho, use_container_width=True)
+
+    # Botão para celular (abre fora / em tela cheia)
+    st.link_button(
+        legenda,
+        caminho
+    )
 
 def video_motivacional(video_id="NsPiCrrfsT4"):
     st.markdown("### 💖 Mensagem de Motivação")
