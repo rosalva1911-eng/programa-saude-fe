@@ -312,16 +312,5 @@ st.markdown(
 )
 
 imagem_com_zoom("21_permitase_florescer.png")
-# ==============================
-# ENCERRAMENTO — PERMITA-SE FLORESCER
-# ==============================
-st.markdown("---")
-st.subheader("Permita-se florescer")
-st.markdown(
-    "Você não chegou até aqui por acaso.\n\n"
-    "Cada página lida foi um passo de volta para si.\n\n"
-    "Florescer não é virar outra pessoa.\n"
-    "É lembrar quem você sempre foi antes de se esquecer."
-)
-imagem_com_zoom("21_permitase_florescer.png")
+
 
