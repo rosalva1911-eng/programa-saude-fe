@@ -196,6 +196,10 @@ st.markdown(
     "Ela responde ao que você sustenta emocionalmente."
 )
 imagem_com_zoom("06_lei_atracao_reflexiva.png.jpg")
+# 🎬 Vídeo — Reflexão sobre a Lei da Atração
+st.markdown("### ✨ Uma pausa para refletir sobre seus pensamentos")
+
+video_motivacional("a-v0uwv6rh0")
 
 # ==============================
 # CAPÍTULO 4 — O RETORNO PARA SI
