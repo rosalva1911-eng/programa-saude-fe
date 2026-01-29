@@ -196,6 +196,7 @@ st.markdown(
     "Ela responde ao que você sustenta emocionalmente."
 )
 imagem_com_zoom("06_lei_atracao_reflexiva.png.jpg")
+
 # 🎬 Vídeo — Reflexão sobre a Lei da Atração
 st.markdown("### ✨ Uma pausa para refletir sobre seus pensamentos")
 
