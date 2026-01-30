@@ -332,6 +332,21 @@ st.markdown(
     "Você já existia antes de qualquer dor.\n"
     "E continuará existindo — agora, mais inteira."
 )
+# 🧘‍♀️ MEDITAÇÃO — VOLTAR PARA SI
+st.markdown("### 🧘‍♀️ Uma pausa para voltar para si")
+
+st.markdown(
+    "_Encontre uma posição confortável. "
+    "Se puder, feche os olhos. "
+    "Este é um momento só seu._"
+)
+
+video_motivacional("MXDVFHvLEIs")
+
+st.markdown(
+    "_Permaneça aqui o tempo que precisar. "
+    "Você pode voltar para si quantas vezes quiser._"
+)
 # 🎬 VÍDEO DE ENCERRAMENTO — PERMITA-SE FLORESCER
 st.markdown("### 🌸 Permita-se florescer")
 
