@@ -245,6 +245,101 @@ st.markdown(
     "Consciência sem prática se perde.\n\n"
     "Aqui, você transforma o que entendeu em ações simples, possíveis e sustentáveis."
 )
+# ==============================
+# CAPÍTULO — 45 LEIS DE UMA MULHER DE ALTO VALOR
+# ==============================
+st.markdown("---")
+st.subheader("🌹 45 Leis de uma Mulher de Alto Valor no Relacionamento")
+st.markdown(
+    "_Não para controlar o outro — mas para não se abandonar._"
+)
+
+st.markdown("""
+Essas leis não nasceram da dureza.  
+Nasceram da consciência.
+
+Ser uma mulher de alto valor não é sobre superioridade.  
+É sobre **coerência interna**.
+
+Elas existem para proteger a minha paz,  
+honrar meu valor  
+e sustentar relações mais conscientes.
+""")
+
+# 🧠 Leis emocionais
+st.markdown("### 🧠 Leis emocionais")
+st.markdown("""
+- Eu não imploro atenção.  
+- Eu não persigo quem não me escolhe.  
+- Eu observo atitudes, não promessas.  
+- Eu não justifico desrespeito.  
+- Eu confio mais no que sinto do que no que escuto.  
+- Eu não negocio minha paz.  
+- Eu não tenho medo de ficar sozinha.  
+- Eu não entro em disputas emocionais.  
+- Eu não tento provar meu valor.  
+- Eu escolho reciprocidade.
+""")
+
+# 💬 Leis de comunicação
+st.markdown("### 💬 Leis de comunicação")
+st.markdown("""
+- Eu falo com clareza e respeito.  
+- Eu não explico excessivamente meus limites.  
+- Eu não discuto quando estou desvalorizada.  
+- Eu não uso silêncio como punição, mas como proteção.  
+- Eu não respondo impulsivamente.  
+- Eu não levanto a voz para ser ouvida.  
+- Eu não aceito migalhas emocionais.  
+- Eu não insisto onde não há diálogo.  
+- Eu não reajo, eu escolho.  
+- Eu me retiro quando necessário.
+""")
+
+# 👑 Leis de autoestima
+st.markdown("### 👑 Leis de autoestima")
+st.markdown("""
+- Eu me trato como prioridade.  
+- Eu cuido do meu corpo, mente e energia.  
+- Eu não me diminuo para caber.  
+- Eu não comparo meu valor com o de ninguém.  
+- Eu honro quem eu sou.  
+- Eu não dependo emocionalmente.  
+- Eu não abandono meus sonhos por alguém.  
+- Eu me valorizo antes de ser valorizada.  
+- Eu confio na minha intuição.  
+- Eu não me sinto culpada por me escolher.
+""")
+
+# ❤️ Leis no amor
+st.markdown("### ❤️ Leis no amor")
+st.markdown("""
+- Amor saudável não dói constantemente.  
+- Quem quer, demonstra.  
+- Interesse não confunde.  
+- Presença vale mais que palavras bonitas.  
+- Amor precisa de segurança emocional.  
+- Eu não tento consertar alguém.  
+- Eu não salvo quem não quer mudar.  
+- Eu não romantizo falta de esforço.  
+- Eu escolho relações conscientes.  
+- Eu permito apenas quem soma.
+""")
+
+# 🌱 Leis de maturidade feminina
+st.markdown("### 🌱 Leis de maturidade feminina")
+st.markdown("""
+- Eu aceito quando não é para mim.  
+- Eu encerro ciclos sem drama.  
+- Eu aprendo com cada experiência.  
+- Eu cresço, não endureço.  
+- Eu sei o meu valor — e ajo de acordo com ele.
+""")
+
+st.markdown("""
+> Essas leis não me afastam do amor.  
+> Elas me aproximam de mim.
+""")
 
 st.markdown(
     "Pequenas escolhas diárias constroem grandes mudanças.\n\n"
