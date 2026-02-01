@@ -9,20 +9,6 @@ st.set_page_config(
     layout="centered"
 )
 # ==============================
-# 🔒 BLOQUEIO DE CÓPIA DE TEXTO
-# ==============================
-st.markdown("""
-<style>
-body {
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none;    /* Firefox */
-    -ms-user-select: none;     /* IE/Edge */
-    user-select: none;         /* Padrão */
-}
-</style>
-""", unsafe_allow_html=True)
-
-# ==============================
 # 🔐 TELA DE ACESSO — CONTEÚDO EXCLUSIVO
 # ==============================
 
@@ -50,6 +36,19 @@ if not st.session_state.acesso_liberado:
             st.error("Código inválido. Verifique e tente novamente.")
 
     st.stop()
+# ==============================
+# 🔒 BLOQUEIO DE CÓPIA DE TEXTO
+# ==============================
+st.markdown("""
+<style>
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+    user-select: none;         /* Padrão */
+}
+</style>
+""", unsafe_allow_html=True)
 # =====================
 # FUNÇÃO: EFEITOS FLUTUANDO
 # =====================
