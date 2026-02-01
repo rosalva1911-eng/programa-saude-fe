@@ -25,17 +25,18 @@ if not st.session_state.acesso_liberado:
     codigo = st.text_input(
         "Código de acesso",
         type="password",
-        placeholder="acesso2026"
+        placeholder="Digite seu código aqui"
     )
 
     if st.button("Entrar"):
-        if codigo == "acesso2026":
+        if codigo == "Acesso2026":
             st.session_state.acesso_liberado = True
             st.rerun()
         else:
             st.error("Código inválido. Verifique e tente novamente.")
 
     st.stop()
+
 # ==============================
 # 🔒 BLOQUEIO DE CÓPIA DE TEXTO
 # ==============================
