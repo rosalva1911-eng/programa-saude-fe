@@ -39,11 +39,11 @@ if not st.session_state.acesso_liberado:
     codigo = st.text_input(
         "Código de acesso",
         type="password",
-        placeholder="Digite seu código aqui"
+        placeholder="acesso2026"
     )
 
     if st.button("Entrar"):
-        if codigo == "Acesso2026":
+        if codigo == "acesso2026":
             st.session_state.acesso_liberado = True
             st.rerun()
         else:
