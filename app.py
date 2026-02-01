@@ -46,6 +46,26 @@ document.addEventListener('contextmenu', function(e) {
 });
 </script>
 """, unsafe_allow_html=True)  
+# ==============================
+# 🔒 BLOQUEIO DE IMAGENS (COM ZOOM VIA EXPANDER)
+# ==============================
+st.markdown("""
+<style>
+/* Bloqueia interação nas imagens do conteúdo normal */
+img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Libera interação APENAS nas imagens dentro do expander */
+details img {
+    pointer-events: auto;
+    user-select: auto;
+    -webkit-user-drag: auto;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ==============================
 # 🔒 BLOQUEIO DE CÓPIA DE TEXTO
