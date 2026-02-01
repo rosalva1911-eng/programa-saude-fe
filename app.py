@@ -29,6 +29,34 @@ if not st.session_state.acesso_liberado:
     )
 
     if st.button("Entrar"):
+        if codigo == "SEU_CODIGO_AQUI":
+            st.session_state.acesso_liberado = True
+            st.rerun()
+        else:
+            st.error("Código inválido. Verifique e tente novamente.")
+
+    st.stop()
+# ==============================
+# 🔐 TELA DE ACESSO — CONTEÚDO EXCLUSIVO
+# ==============================
+
+if "acesso_liberado" not in st.session_state:
+    st.session_state.acesso_liberado = False
+
+if not st.session_state.acesso_liberado:
+    st.title("🔐 Acesso exclusivo")
+    st.markdown(
+        "Este conteúdo é de uso pessoal e protegido.\n\n"
+        "Digite seu **código de acesso** para continuar."
+    )
+
+    codigo = st.text_input(
+        "Código de acesso",
+        type="password",
+        placeholder="Digite seu código aqui"
+    )
+
+    if st.button("Entrar"):
         if codigo == "Acesso2026":
             st.session_state.acesso_liberado = True
             st.rerun()
