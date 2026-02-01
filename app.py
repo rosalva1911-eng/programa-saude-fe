@@ -253,6 +253,14 @@ st.subheader("🌹 45 Leis de uma Mulher de Alto Valor no Relacionamento")
 st.markdown(
     "_Não para controlar o outro — mas para não se abandonar._"
 )
+# 🎬 Vídeo — As 45 Leis de uma Mulher de Alto Valor
+st.markdown("### 🌹 Uma mensagem para fortalecer seu posicionamento")
+
+video_motivacional("eHN7ertzvi0")
+
+st.markdown(
+    "_Essas leis não existem para punir. Elas existem para proteger sua paz e sustentar relações conscientes._"
+)
 
 st.markdown("""
 Essas leis não nasceram da dureza.  
