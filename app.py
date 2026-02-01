@@ -36,6 +36,16 @@ if not st.session_state.acesso_liberado:
             st.error("Código inválido. Verifique e tente novamente.")
 
     st.stop()
+# ==============================
+# 🛑 BLOQUEIO DE CLIQUE DIREITO
+# ==============================
+st.markdown("""
+<script>
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+</script>
+""", unsafe_allow_html=True)  
 
 # ==============================
 # 🔒 BLOQUEIO DE CÓPIA DE TEXTO
