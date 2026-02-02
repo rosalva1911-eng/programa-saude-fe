@@ -445,38 +445,38 @@ st.markdown(
     "O corpo é a casa onde a sua energia habita.\n\n"
     "Cuidar dele é um gesto de respeito e amor-próprio."
 )
-imagem_com_zoom("15_saude_cuidar_corpo.png.")
+imagem_com_zoom("15_saude_cuidar_corpo.png")
 
 st.markdown(
     "Cuidado de verdade não machuca, não exige perfeição "
     "e não nasce da culpa.\n\n"
     "Ele nasce do acolhimento."
 )
-imagem_com_zoom("16_saude_cuidado_verdade.png.")
+imagem_com_zoom("16_saude_cuidado_verdade.png")
 
 st.markdown(
     "O corpo fala o tempo todo.\n\n"
     "Aprender a escutá-lo muda a forma como você vive."
 )
-imagem_com_zoom("17_saude_escute_corpo.png.")
+imagem_com_zoom("17_saude_escute_corpo.png")
 
 st.markdown(
     "Movimento é diálogo com o corpo, não castigo.\n\n"
     "Escolha se mover por você, não contra você."
 )
-imagem_com_zoom("18_saude_movivente-se.png.")
+imagem_com_zoom("18_saude_movivente-se.png")
 
 st.markdown(
     "Quando você se move com presença, "
     "o corpo responde com mais vitalidade e equilíbrio."
 )
-imagem_com_zoom("19_saude_movimento_escuta.png.")
+imagem_com_zoom("19_saude_movimento_escuta.png")
 
 st.markdown(
     "Respeitar o próprio ritmo é um dos maiores atos de autocuidado.\n\n"
     "Seu corpo sabe o tempo certo das coisas."
 )
-imagem_com_zoom("20_saude_respeite_ritmo.png.")
+imagem_com_zoom("20_saude_respeite_ritmo.png")
 # 🎬 Vídeo de transição — autocuidado
 st.markdown("### 🌿 Uma pausa para refletir")
 
