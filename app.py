@@ -194,7 +194,7 @@ st.caption("Autora: Fhernânda Rocha")
 # ==============================
 # CAPA
 # ==============================
-imagem_com_zoom("00_capa.png.png")
+imagem_com_zoom("assets/00_capa.png")
 video_motivacional()
 
 # ==============================
@@ -206,7 +206,7 @@ st.markdown(
     "Antes de qualquer relacionamento, você já era alguém.\n\n"
     "Este livro começa no momento em que você se lembra de si."
 )
-imagem_com_zoom("01_lembrete.png.jpg")
+imagem_com_zoom("assets/01_lembrete.png")
 # 🎬 VÍDEO DE BOAS-VINDAS
 st.markdown("### 🌿 Bem-vinda a este espaço")
 
@@ -226,7 +226,7 @@ st.markdown(
     "O despertar começa quando você percebe que não era amor demais.\n\n"
     "Era a ausência de si. Aqui, a consciência começa a se formar."
 )
-imagem_com_zoom("02_lei_atracao_espelho.png.jpg")
+imagem_com_zoom("assets/02_lei_atracao_espelho.png")
 
 # ==============================
 # CAPÍTULO 2 — QUANDO VOCÊ SE ABANDONA
@@ -237,19 +237,19 @@ st.markdown(
     "Nem sempre o fim dói apenas pela ausência do outro.\n\n"
     "Muitas vezes, dói porque, no caminho, você se deixou para trás."
 )
-imagem_com_zoom("03_quando_amor_termina.png.jpg")
+imagem_com_zoom("assets/03_quando_amor_termina.png")
 
 st.markdown(
     "Você tentou sustentar, compreender e não perder.\n\n"
     "E, aos poucos, foi se afastando de quem você era."
 )
-imagem_com_zoom("04_onde_se_perdeu.png.jpg")
+imagem_com_zoom("assets/04_onde_se_perdeu.png")
 
 st.markdown(
     "Sentir não é falha. Amar não é erro.\n\n"
     "O que machuca é permanecer onde não há reciprocidade."
 )
-imagem_com_zoom("05_voce_nao_falhou.png.jpg")
+imagem_com_zoom("assets/05_voce_nao_falhou.png")
 
 # 🎬 PAUSA DE CONSCIÊNCIA — EU JÁ EXISTIA ANTES DE VOCÊ
 video_motivacional("PMLO-uV2s4s")
@@ -263,7 +263,7 @@ st.markdown(
     "A energia não responde ao que você deseja.\n\n"
     "Ela responde ao que você sustenta emocionalmente."
 )
-imagem_com_zoom("06_lei_atracao_reflexiva.png.jpg")
+imagem_com_zoom("assets/06_lei_atracao_reflexiva.png")
 
 # 🎬 Vídeo — Reflexão sobre a Lei da Atração
 st.markdown("### ✨ Uma pausa para refletir sobre seus pensamentos")
@@ -279,16 +279,16 @@ st.markdown(
     "Retornar para si é um movimento de coragem.\n\n"
     "É parar de esperar que o outro mude e começar a se escolher."
 )
-imagem_com_zoom("07_nao_suplicar.png.jpg")
+imagem_com_zoom("assets/07_nao_suplicar.png")
 
 st.markdown(
     "Parar de se abandonar é um compromisso diário.\n\n"
     "É respeitar limites, necessidades e o próprio ritmo."
 )
-imagem_com_zoom("14_voltar_para_si.png.jpg")
+imagem_com_zoom("assets/08_parar_abandonar.png")
 
 st.markdown("Reconhecer o próprio valor é o ponto onde tudo se reorganiza.")
-imagem_com_zoom("09_reconheca_valor.png.jpg")
+imagem_com_zoom("assets/09_reconheca_valor.png")
 
 video_motivacional("LunWAyKmTPU")
 
@@ -302,7 +302,7 @@ st.markdown(
     "Relações saudáveis sustentam, acolhem e lembram quem você é "
     "quando o mundo parece pesado demais."
 )
-imagem_com_zoom("10_amizades.png.jpg")
+imagem_com_zoom("assets/10_amizades.png")
 
 # ==============================
 # CAPÍTULO 6 — PRÁTICAS DE CONTINUIDADE
@@ -421,19 +421,19 @@ st.markdown(
     "Pequenas escolhas diárias constroem grandes mudanças.\n\n"
     "Este checklist é um convite para se escolher todos os dias."
 )
-imagem_com_zoom("11_Checklist.png.jpg")
+imagem_com_zoom("assets/11_checklist.png")
 
 st.markdown(
     "Escrever é uma forma de escutar a si mesma.\n\n"
     "Esta carta é um gesto de cuidado com quem você está se tornando."
 )
-imagem_com_zoom("12_como_escrever_carta.png.jpg")
+imagem_com_zoom("assets/12_como_escrever_carta.png")
 
 st.markdown(
     "Agora, a palavra é sua.\n\n"
     "Escreva sem pressa, sem censura e com verdade."
 )
-imagem_com_zoom("13_carta_futuro.png.jpg")
+imagem_com_zoom("assets/13_carta_futuro.png")
 
 # ==============================
 # CAPÍTULO 7 — SAÚDE É AUTOCUIDADO
@@ -449,38 +449,38 @@ st.markdown(
     "O corpo é a casa onde a sua energia habita.\n\n"
     "Cuidar dele é um gesto de respeito e amor-próprio."
 )
-imagem_com_zoom("15_saude_cuidar_corpo.png")
+imagem_com_zoom("assets/15_saude_cuidar_corpo.png")
 
 st.markdown(
     "Cuidado de verdade não machuca, não exige perfeição "
     "e não nasce da culpa.\n\n"
     "Ele nasce do acolhimento."
 )
-imagem_com_zoom("16_saude_cuidado_verdade.png")
+imagem_com_zoom("assets/16_saude_cuidado_verdade.png")
 
 st.markdown(
     "O corpo fala o tempo todo.\n\n"
     "Aprender a escutá-lo muda a forma como você vive."
 )
-imagem_com_zoom("17_saude_escute_corpo.png")
+imagem_com_zoom("assets/17_saude_escute_corpo.png")
 
 st.markdown(
     "Movimento é diálogo com o corpo, não castigo.\n\n"
     "Escolha se mover por você, não contra você."
 )
-imagem_com_zoom("18_saude_movivente-se.png")
+imagem_com_zoom("assets/18_saude_movimente_se.png")
 
 st.markdown(
     "Quando você se move com presença, "
     "o corpo responde com mais vitalidade e equilíbrio."
 )
-imagem_com_zoom("19_saude_movimento_escuta.png")
+imagem_com_zoom("assets/19_saude_movimento_escuta.png")
 
 st.markdown(
     "Respeitar o próprio ritmo é um dos maiores atos de autocuidado.\n\n"
     "Seu corpo sabe o tempo certo das coisas."
 )
-imagem_com_zoom("20_saude_respeite_ritmo.png")
+imagem_com_zoom("assets/20_saude_respeite_ritmo.png")
 # 🎬 Vídeo de transição — autocuidado
 st.markdown("### 🌿 Uma pausa para refletir")
 
@@ -528,6 +528,6 @@ st.markdown(
     "Siga no seu tempo, com gentileza e verdade._"
 )
 
-imagem_com_zoom("21_permitase_florescer.png")
+imagem_com_zoom("assets/21_permitase_florescer.png")
 
 
