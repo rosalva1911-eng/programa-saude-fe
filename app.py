@@ -282,12 +282,11 @@ st.markdown(
     "Parar de se abandonar é um compromisso diário.\n\n"
     "É respeitar limites, necessidades e o próprio ritmo."
 )
-imagem_com_zoom("08_parar_abandonar.png.jpg")
-
 st.markdown("Reconhecer o próprio valor é o ponto onde tudo se reorganiza.")
 imagem_com_zoom("09_reconheca_valor.png.jpg")
 
 video_motivacional("LunWAyKmTPU")
+imagem_com_zoom("21_permitase_florescer.png")
 
 # ==============================
 # CAPÍTULO 5 — REDES DE SUSTENTAÇÃO
