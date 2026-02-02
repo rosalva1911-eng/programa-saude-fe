@@ -137,12 +137,9 @@ def efeitos_flutuando(tema: str = "flores"):
         """,
         unsafe_allow_html=True
     )
-def imagem_com_zoom(caminho: str, texto_expander="🔍 Ampliar imagem para leitura"):
-    # imagem normal no fluxo do livro
+def imagem_com_zoom(caminho: str, legenda: str = "🔍 Ampliar imagem"):
     st.image(caminho, use_container_width=True)
-
-    # zoom SEM recarregar a página
-    with st.expander(texto_expander):
+    with st.expander(legenda):
         st.image(caminho, use_container_width=True)
 
 def video_motivacional(video_id="NsPiCrrfsT4"):
