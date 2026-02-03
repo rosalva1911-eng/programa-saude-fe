@@ -320,7 +320,7 @@ st.markdown(
 # 🎬 Vídeo — As 45 Leis de uma Mulher de Alto Valor
 st.markdown("### 🌹 Uma mensagem para fortalecer seu posicionamento")
 
-video_motivacional("eHN7ertzvi0")
+video_motivacional("QRyo1cRGJSo")
 
 st.markdown(
     "_Essas leis não existem para punir. Elas existem para proteger sua paz e sustentar relações conscientes._"
