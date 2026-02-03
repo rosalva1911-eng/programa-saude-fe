@@ -286,7 +286,6 @@ st.markdown("Reconhecer o próprio valor é o ponto onde tudo se reorganiza.")
 imagem_com_zoom("09_reconheca_valor.png.jpg")
 
 video_motivacional("LunWAyKmTPU")
-imagem_com_zoom("21_permitase_florescer.png")
 
 # ==============================
 # CAPÍTULO 5 — REDES DE SUSTENTAÇÃO
@@ -524,6 +523,11 @@ st.markdown(
     "Siga no seu tempo, com gentileza e verdade._"
 )
 imagem_com_zoom("21_permitase_florescer.png")
+st.markdown("---")
+video_youtube(
+    "2J3ex8STt_g",
+    "🌸 Integração final — um caminho de volta para si"
+)
 
 
 
