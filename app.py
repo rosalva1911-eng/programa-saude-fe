@@ -483,10 +483,10 @@ st.markdown("### 🌿 Uma pausa para refletir")
 video_motivacional("ZylGCem4zb0")
 
 # ==============================
-# ENCERRAMENTO — PERMITA-SE FLORESCER
+# ENCERRAMENTO — PERMITA-SE Florescer
 # ==============================
 st.markdown("---")
-st.subheader("Permita-se florescer")
+st.subheader("Permita-se Florescer")
 st.markdown(
     "Você não chegou até aqui por acaso.\n\n"
     "Cada página lida foi um passo de volta para si.\n\n"
