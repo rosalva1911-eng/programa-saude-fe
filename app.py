@@ -524,10 +524,7 @@ st.markdown(
 )
 imagem_com_zoom("21_permitase_florescer.png")
 st.markdown("---")
-video_youtube(
-    "2J3ex8STt_g",
-    "🌸 Integração final — um caminho de volta para si"
-)
+video_motivacional("2J3ex8STt_g", "🌸 Integração final")
 
 
 
