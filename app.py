@@ -513,7 +513,7 @@ st.markdown(
     "_Permaneça aqui o tempo que precisar. "
     "Você pode voltar para si quantas vezes quiser._"
 )
-# 🎬 VÍDEO DE ENCERRAMENTO — PERMITA-SE FLORESCER
+# 🎬 VÍDEO Para Refletir — PERMITA-SE FLORESCER
 st.markdown("### 🌸 Permita-se florescer")
 
 video_motivacional("r63QJvI4Hvw")
@@ -522,9 +522,20 @@ st.markdown(
     "_Leve com você tudo o que sentiu aqui. "
     "Siga no seu tempo, com gentileza e verdade._"
 )
+st.markdown("---")
+st.subheader("🌸 Permita-se florescer")
+
+st.markdown(
+    "Leve com você tudo o que sentiu aqui.\n\n"
+    "Siga no seu tempo, com gentileza e verdade."
+)
+
+video_motivacional("2J3ex8STt_g")
+
 imagem_com_zoom("21_permitase_florescer.png")
 st.markdown("---")
-video_motivacional("2J3ex8STt_g", "🌸 Integração final")
+
+
 
 
 
